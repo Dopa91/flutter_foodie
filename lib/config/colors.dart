@@ -12,9 +12,10 @@ const Color buttonColor1 = Color.fromARGB(255, 233, 189, 149);
 const Color buttonColorRecipeFeed1 = Color.fromARGB(255, 210, 197, 187);
 const Color buttonColorRecipeFeed2 = Color.fromARGB(255, 232, 97, 97);
 const Color bttnlogColor = Color.fromARGB(255, 232, 196, 164);
-const Color bttnsingupColor = Color.fromARGB(255, 255, 187, 127);
+const Color bttnColor1 = Color.fromARGB(255, 255, 187, 127);
+const Color foodietitle = Color.fromARGB(255, 103, 71, 31);
 
-
+const Color signInBtnColor =  Color.fromARGB(255, 232, 196, 164);
 
 
 
