@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/screens/main_screen.dart';
+import 'package:foodie_screen/mainscreen/main_screen.dart';
 
 void main() {
   runApp(const MainApp());
