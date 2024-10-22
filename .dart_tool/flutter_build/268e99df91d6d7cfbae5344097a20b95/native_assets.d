@@ -1,0 +1,1 @@
+ /Users/beyz/Desktop/beyzas_daten/Code/flutter_foodie/.dart_tool/flutter_build/268e99df91d6d7cfbae5344097a20b95/native_assets.yaml: 
