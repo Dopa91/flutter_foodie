@@ -53,67 +53,69 @@ class FeedScreen extends StatelessWidget {
         ),
       
       child: 
-         Column(
-           children: [
-            GestureDetector(
-      onTap: (){ Navigator.push(context, MaterialPageRoute(
-        builder: (context)=> 
-         const SignUpScreen(  // musst du ändern !!!!!
-      ),
-      ),
-      );
-      },
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 16),
-        width: 340, 
-        height: 40,
-        decoration: BoxDecoration(color: searchButtonColor1,
-        borderRadius: BorderRadius.circular(10),
-        ),
-        alignment: Alignment.center,
-        child: const Text
-        ("Was möchtest du heute Kochen?",
-        style: TextStyle(
-          fontFamily: "SFProDisplay",
-          fontWeight: FontWeight.w500,
-          fontSize: 14,
-          fontStyle: FontStyle.italic,
-          ),
-        ),
-      ),
+         Padding(
+           padding: const EdgeInsets.only(top:90),
+           child: Column(
+             children: [
+              GestureDetector(
+                 onTap: (){ Navigator.push(context, MaterialPageRoute(
+                   builder: (context)=> 
+           const SignUpScreen(  // musst du ändern !!!!!
+                 ),
+                 ),
+                 );
+                 },
+                 child: Container(
+                   margin: const EdgeInsets.symmetric(horizontal: 16),
+                   width: 340, 
+                   height: 40,
+                   decoration: BoxDecoration(color: searchButtonColor1,
+                   borderRadius: BorderRadius.circular(10),
+                   ),
+                   alignment: Alignment.center,
+                   child: const Text
+                   ("Was möchtest du heute Kochen?",
+                   style: TextStyle(
+            fontFamily: "SFProDisplay",
+            fontWeight: FontWeight.w500,
+            fontSize: 14,
+            fontStyle: FontStyle.italic,
             ),
-              
-        Padding(
-              padding: const EdgeInsets.only(left: 0),
-              child: SizedBox(
-                width: 400,
-                height: 900,
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  itemCount: foodRecipe.length,
-                  
-                  itemBuilder: (context, index) {
-                    final foodItem = foodRecipe[index];
+                   ),
+                 ),
+              ),
+                
+                   Padding(
+                padding: const EdgeInsets.only(left: 0),
+                child: SizedBox(
+                  width: 400,
+                  height: 744,
+                  child: ListView.builder(
+                    scrollDirection: Axis.vertical,
+                    itemCount: foodRecipe.length,
                     
-                    return FoodContainerWidget(
-                      onTap: () {
-                        Navigator.push(context, 
-                        MaterialPageRoute(
-                      builder: (context) => 
-                            RecipeScreen(foodItem: 
-                      foodItem.imageTitle
-                      ),
-                    ));
-                    // end
-                  },
-                      foodRecipe: foodRecipe[index], foodItem: foodItem,
-              );
-              },
+                    itemBuilder: (context, index) {
+                      final foodItem = foodRecipe[index];
+                      
+                      return FoodContainerWidget(
+                        onTap: () {
+                          Navigator.push(context, 
+                          MaterialPageRoute(
+                        builder: (context) => 
+                              RecipeScreen(foodItem: 
+                        foodItem.imageTitle
+                        ),
+                      ));
+                    },
+                        foodRecipe: foodRecipe[index], foodItem: foodItem,
+                );
+                },
+              ),
             ),
-          ),
-          
-        ),
-         ],
+            
+                   ),
+           ],
+           ),
          ),
          ),
       
