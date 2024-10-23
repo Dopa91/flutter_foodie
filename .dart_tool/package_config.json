@@ -158,6 +158,18 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "scrollable_positioned_list",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "simple_search_dropdown",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -192,6 +204,12 @@
       "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "stringr",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/stringr-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "term_glyph",
@@ -242,7 +260,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-10-22T15:17:59.188456Z",
+  "generated": "2024-10-23T16:39:04.778157Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter",

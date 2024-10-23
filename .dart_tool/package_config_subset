@@ -94,6 +94,14 @@ petitparser
 3.2
 file:///Users/beyz/.pub-cache/hosted/pub.dev/petitparser-6.0.2/
 file:///Users/beyz/.pub-cache/hosted/pub.dev/petitparser-6.0.2/lib/
+scrollable_positioned_list
+2.15
+file:///Users/beyz/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/
+file:///Users/beyz/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/lib/
+simple_search_dropdown
+3.4
+file:///Users/beyz/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.2.0/
+file:///Users/beyz/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.2.0/lib/
 social_login_buttons
 2.12
 file:///Users/beyz/.pub-cache/hosted/pub.dev/social_login_buttons-1.0.7/
@@ -114,6 +122,10 @@ string_scanner
 2.18
 file:///Users/beyz/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/
 file:///Users/beyz/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib/
+stringr
+2.15
+file:///Users/beyz/.pub-cache/hosted/pub.dev/stringr-1.0.0/
+file:///Users/beyz/.pub-cache/hosted/pub.dev/stringr-1.0.0/lib/
 term_glyph
 2.12
 file:///Users/beyz/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/
