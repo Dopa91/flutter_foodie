@@ -9,13 +9,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  simple_search_dropdown: ^5.2.0
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1
+  social_login_buttons: ^1.0.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
-  flutter_launcher_icons: ^0.14.1
-  social_login_buttons: ^1.0.7
+  
 
 
 flutter_launcher_icons:
@@ -26,10 +28,8 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/iconfoodie1.png
-    - assets/icon/google.png
-    - assets/icon/Apple_logo_white.svg.png
-    - assets/icon/iconlogo.png
+    - assets/images/
+    - assets/icon/
 
   fonts:
     - family: SFProDisplay

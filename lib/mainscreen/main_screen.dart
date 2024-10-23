@@ -29,18 +29,12 @@ class MainScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 65, bottom: 10),
+               Padding(
+                padding: const EdgeInsets.only(top: 65, bottom: 10),
                 child: Center(
                   child: Text(
                     "Foodie",
-                    style: TextStyle(
-                      fontSize: 70,
-                      fontWeight: FontWeight.w900,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: "SFProDisplay",
-                      color: Color.fromARGB(255, 100, 71, 39),
-                    ),
+                    style: Theme.of(context).textTheme.titleLarge
                   ),
                 ),
               ),

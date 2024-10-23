@@ -89,7 +89,7 @@ class SignUpScreen extends StatelessWidget {
                   text: "Sign Up!",
                   onPressed: () {Navigator.push(
                         context, MaterialPageRoute(
-                          builder: (context)=>const FeedScreen( 
+                          builder: (context) => const FeedScreen( 
                         )
                         )
                   );
