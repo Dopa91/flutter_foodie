@@ -12,7 +12,7 @@ class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
       child: TextField(
         obscureText: false, // text sehen
         textAlign: TextAlign.center,
@@ -27,7 +27,13 @@ class SearchButton extends StatelessWidget {
           filled: true,
           fillColor: searchButtonColor1,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(25),
+            borderSide: BorderSide.none
+            // borderSide: const BorderSide(color: 
+            // Colors.white,
+            // width: 1),
+            
+            
           ),
         ),
         // textAlign: TextAlign.center,

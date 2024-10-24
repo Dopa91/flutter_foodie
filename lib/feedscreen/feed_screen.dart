@@ -6,12 +6,49 @@ import 'package:foodie_screen/repositories/food_data.dart';
 import 'package:foodie_screen/widget/food_container_widget.dart';
 
 
-class FeedScreen extends StatelessWidget {
+class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
+
+
+
+  @override
+  State<FeedScreen> createState() => _FeedScreenState();
+}
+
+class _FeedScreenState extends State<FeedScreen> {
+int _selectedIndex = 0;
+
+void _navigateBottnBar(int index){
+  setState(() {
+    _selectedIndex = index;
+    if (_selectedIndex == 1) {
+     Navigator.of(context).push(MaterialPageRoute(builder:(context) => const RecipeScreen(foodItem: " Fav." ),
+       ));
+    }
+  });
+}
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: backroundColor2,
+    bottomNavigationBar: BottomNavigationBar(
+      backgroundColor:searchButtonColor1, 
+      fixedColor:
+                const Color.fromARGB(255, 174, 90, 11), 
+      
+      
+      
+      currentIndex: _selectedIndex,
+      onTap: _navigateBottnBar,
+      type: BottomNavigationBarType.fixed,
+            items: const [
+       BottomNavigationBarItem(icon: Icon(Icons.restaurant), label: "Heute" ),
+       BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Favorit"),
+       BottomNavigationBarItem(icon: Icon(Icons.public), label: "Entdecken"),
+       BottomNavigationBarItem(icon: Icon(Icons.person), label: "Person"),
+
+    ],),
     //   appBar: AppBar( actions: [GestureDetector(
     //     onTap: (){ Navigator.push(context, MaterialPageRoute(
     //       builder: (context)=> 
@@ -41,53 +78,55 @@ class FeedScreen extends StatelessWidget {
     //   )
     // ],
     //   ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              backroundColor2, 
-              backroundColor1,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                backroundColor2, 
+                backroundColor1,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
           ),
-        ),
-          child: Padding(
-          padding: const EdgeInsets.only(top: 100),
-          child: Column(
-            children: [
-            const SearchButton(text: "Was möchtest du heute kochen?"),
-            const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.only(left: 0),
-                child: SizedBox(
-                  width: 400,
-                  height: 714,
-                  child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: foodRecipe.length,
-                    
-                    itemBuilder: (context, index) {
-                      final foodItem = foodRecipe[index];
+            child: Padding(
+            padding: const EdgeInsets.only(top: 80),
+            child: Column(
+              children: [
+              const SearchButton(text: "Was möchtest du heute kochen?"),
+              const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.only(left: 0),
+                  child: SizedBox(
+                    width: 400,
+                    height: 700,
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: foodRecipe.length,
                       
-                      return FoodContainerWidget(
-                        onTap: () {
-                          Navigator.push(context, 
-                          MaterialPageRoute(
-                        builder: (context) => 
-                              RecipeScreen(foodItem: 
-                        foodItem.imageTitle
-                      ),
-                     )
-                   );
-                   },
-                   foodRecipe: foodRecipe[index], foodItem: foodItem,
+                      itemBuilder: (context, index) {
+                        final foodItem = foodRecipe[index];
+                        
+                        return FoodContainerWidget(
+                          onTap: () {
+                            Navigator.push(context, 
+                            MaterialPageRoute(
+                          builder: (context) =>  // Rezepte Seite
+                                RecipeScreen(foodItem: 
+                          foodItem.imageTitle
+                        ),
+                       )
                      );
-                    },
+                     },
+                     foodRecipe: foodRecipe[index], foodItem: foodItem,
+                       );
+                      },
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
