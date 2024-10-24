@@ -78,55 +78,49 @@ void _navigateBottnBar(int index){
     //   )
     // ],
     //   ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                backroundColor2, 
-                backroundColor1,
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              backroundColor2, 
+              backroundColor1,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-            child: Padding(
-            padding: const EdgeInsets.only(top: 80),
-            child: Column(
-              children: [
-              const SearchButton(text: "Was möchtest du heute kochen?"),
-              const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: SizedBox(
-                    width: 400,
-                    height: 700,
-                    child: ListView.builder(
-                      scrollDirection: Axis.vertical,
-                      itemCount: foodRecipe.length,
-                      
-                      itemBuilder: (context, index) {
-                        final foodItem = foodRecipe[index];
-                        
-                        return FoodContainerWidget(
-                          onTap: () {
-                            Navigator.push(context, 
-                            MaterialPageRoute(
-                          builder: (context) =>  // Rezepte Seite
-                                RecipeScreen(foodItem: 
-                          foodItem.imageTitle
-                        ),
-                       )
-                     );
-                     },
-                     foodRecipe: foodRecipe[index], foodItem: foodItem,
-                       );
-                      },
+        ),
+          child: Padding(
+          padding: const EdgeInsets.only(top: 80),
+          child: Column(
+            children: [
+            const SearchButton(text: "Was möchtest du heute kochen?"),
+            SizedBox(height: 10),
+              Expanded(
+                child: ListView.builder(
+                  padding: EdgeInsets.zero,
+                  scrollDirection: Axis.vertical,
+                  itemCount: foodRecipe.length,
+                  
+                  itemBuilder: (context, index) {
+                    final foodItem = foodRecipe[index];
+                    
+                    return FoodContainerWidget(
+                      onTap: () {
+                        Navigator.push(context, 
+                        MaterialPageRoute(
+                      builder: (context) =>  // Rezepte Seite
+                            RecipeScreen(foodItem: 
+                      foodItem.imageTitle
                     ),
-                  ),
+                   )
+                 );
+                 },
+                 foodRecipe: foodRecipe[index], foodItem: foodItem,
+                   );
+                  },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
