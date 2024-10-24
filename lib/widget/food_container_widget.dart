@@ -72,19 +72,20 @@ class FoodContainerWidget extends StatelessWidget {
                             ),
                             const Icon(Icons.favorite_border, // Favoriten-Icon
                               size: 25,
-                              color: Color.fromARGB(183, 234, 220, 208),
+                              color: Color.fromARGB(255, 234, 220, 208),
                               
                             ),
                           ],
                         ),
-                        const SizedBox(height: 25),
+                        const SizedBox(height: 20),
                         Row( // Zweite Zeile: Zeit und Preis
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             const Icon(Icons.schedule, // Time Icon
                               size: 20,
-                              color: Color.fromARGB(145, 234, 220, 208),
+                              color: Color.fromARGB(255, 234, 220, 208),
                             ),
+                           const SizedBox(width: 4),                            
                             Text( // Zeit
                               foodRecipe.imageSubTime,
                               style: const TextStyle(
@@ -95,7 +96,7 @@ class FoodContainerWidget extends StatelessWidget {
                                 fontFamily: "SFProDisplay",
                               ),
                             ),
-                            Spacer(),  // abstand 
+                            const  Spacer(),  // abstand 
                             Text( // Preis
                               foodRecipe.imagePrice,
                               style: const TextStyle(

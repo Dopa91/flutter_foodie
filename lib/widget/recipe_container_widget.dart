@@ -42,21 +42,22 @@ class RecipeContainer extends StatelessWidget {
                                 fontFamily: "SFProDisplay",
                     ),
                   ),
+                SizedBox(height: 20),
                 Row(
                   children: [
-              
                    Text(
-                     "       400 g\n"
-                     "       200 g\n"
-                     "          2EL\n"
-                     "          1x\n"
-                     "          1X\n"
-                     "1x ca. 100 g \n"
-                     "       1 Dose\n"
-                     "       1 TL\n"
-                     "       1 TL\n"
-                     "       1 TL\n"
-                     "       1/5 \n",
+                     "        400 g\n"
+                     "        200 g\n"
+                     "         2 EL\n"
+                     " 1x ca. 100 g\n"
+                     "   2 ca. 10 g\n"
+                     "  1x ca. 10 g\n"
+                     "        200 g\n"
+                     "         1 TL\n"
+                     "         1 TL\n"
+                     "         1 TL\n"
+                     "         1/5 \n"
+                     "         2 EL\n",
                      textAlign: TextAlign.end,
                      style: TextStyle(
                        color: buttonColorRecipeFeed1,
@@ -66,8 +67,9 @@ class RecipeContainer extends StatelessWidget {
                                  fontFamily: "SFProDisplay",
                      ),
                    ),
-                  VerticalDivider(), // noch nicht fertig!!!
-                  SizedBox(height: 24),
+                  VerticalDivider( thickness: 2,
+                  color: buttonColorRecipeFeed1), // noch nicht fertig!!!
+                  SizedBox(height:10),
                   Text(
                     "Hünerbrustfilet \n"
                     "Naturjoghurt\n"
