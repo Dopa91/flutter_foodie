@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/feautures/search_button.dart';
 import 'package:foodie_screen/feedscreen/recipe_screen.dart';
 import 'package:foodie_screen/repositories/food_data.dart';
-import 'package:foodie_screen/singupscreen/sign_up_screen.dart';
 import 'package:foodie_screen/widget/food_container_widget.dart';
+
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
@@ -51,45 +52,17 @@ class FeedScreen extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
         ),
-      
-      child: 
-         Padding(
-           padding: const EdgeInsets.only(top:90),
-           child: Column(
-             children: [
-              GestureDetector(
-                 onTap: (){ Navigator.push(context, MaterialPageRoute(
-                   builder: (context)=> 
-           const SignUpScreen(  // musst du ändern !!!!!
-                 ),
-                 ),
-                 );
-                 },
-                 child: Container(
-                   margin: const EdgeInsets.symmetric(horizontal: 16),
-                   width: 340, 
-                   height: 40,
-                   decoration: BoxDecoration(color: searchButtonColor1,
-                   borderRadius: BorderRadius.circular(10),
-                   ),
-                   alignment: Alignment.center,
-                   child: const Text
-                   ("Was möchtest du heute Kochen?",
-                   style: TextStyle(
-            fontFamily: "SFProDisplay",
-            fontWeight: FontWeight.w500,
-            fontSize: 14,
-            fontStyle: FontStyle.italic,
-            ),
-                   ),
-                 ),
-              ),
-                
-                   Padding(
+          child: Padding(
+          padding: const EdgeInsets.only(top: 100),
+          child: Column(
+            children: [
+            const SearchButton(text: "Was möchtest du heute kochen?"),
+            const SizedBox(height: 10),
+              Padding(
                 padding: const EdgeInsets.only(left: 0),
                 child: SizedBox(
                   width: 400,
-                  height: 744,
+                  height: 714,
                   child: ListView.builder(
                     scrollDirection: Axis.vertical,
                     itemCount: foodRecipe.length,
@@ -104,21 +77,20 @@ class FeedScreen extends StatelessWidget {
                         builder: (context) => 
                               RecipeScreen(foodItem: 
                         foodItem.imageTitle
-                        ),
-                      ));
+                      ),
+                     )
+                   );
+                   },
+                   foodRecipe: foodRecipe[index], foodItem: foodItem,
+                     );
                     },
-                        foodRecipe: foodRecipe[index], foodItem: foodItem,
-                );
-                },
+                  ),
+                ),
               ),
-            ),
-            
-                   ),
-           ],
-           ),
-         ),
-         ),
-      
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
