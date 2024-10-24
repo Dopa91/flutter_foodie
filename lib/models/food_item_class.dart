@@ -3,8 +3,8 @@ class FoodItem {
   String imageTitle;
   String imageSubTime;
   String imagePrice;
-  String imageFav;
-  String iconClock;
+  // String imageFav;
+  // String iconClock;
   // String imageDescription;
   // String imageIngredients;
   // String imageReviews;
@@ -14,8 +14,8 @@ class FoodItem {
     required this.imageTitle,
     required this.imageSubTime,
     required this.imagePrice,
-    required this.imageFav,
-    required this.iconClock,
+    // required this.imageFav,
+    // required this.iconClock,
 
     // required this.imageDescription,
     // required this.imageIngredients,
