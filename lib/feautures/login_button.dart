@@ -13,19 +13,45 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      child: Text(
-        text,
-        style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+    return Container(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.3),
+            offset: const Offset(0, 4),
+            blurRadius: 8,
+          ),
+        ],
       ),
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(horizontal: 130, vertical: 15),
-        backgroundColor: signInBtnColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        child: Text(
+          text,style: const TextStyle(
+                                color: Color.fromARGB(255, 45, 25, 7),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14,
+                                fontStyle: FontStyle.italic,
+                                fontFamily: "SFProDisplay",
+                              ),
+                            ),
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+          backgroundColor: signInBtnColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
       ),
     );
   }
 }
+  
+
+                //          TextStyle(
+                //                 color: Color.fromARGB(255, 234, 220, 208),
+                //  fontWeight: FontWeight.w600,
+                //                 fontSize: 18,
+                //                 fontStyle: FontStyle.italic,
+                //                 fontFamily: "SFProDisplay",
+                //               ),
+                //             ),

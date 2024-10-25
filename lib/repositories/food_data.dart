@@ -1,4 +1,3 @@
-
 import 'package:foodie_screen/models/food_item_class.dart';
 
 List<FoodItem> foodRecipe = [

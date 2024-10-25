@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
 
-
 class SearchButton extends StatelessWidget {
   const SearchButton({
-    super.key, required this.text
+    super.key,
+    required this.text,
   });
 
   final String text;
@@ -13,30 +13,60 @@ class SearchButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 0),
-      child: TextField(
-        obscureText: false, // text sehen
-        textAlign: TextAlign.center,
-        decoration: InputDecoration(
-          hintText: text,
-          hintStyle: const TextStyle(
+      child: Container(
+        decoration: BoxDecoration(
+          color: searchButtonColor1,
+          borderRadius: BorderRadius.circular(25),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              offset: const Offset(0, 4),
+              blurRadius: 6,
+            ),
+          ],
+        ),
+        child: TextField(
+          obscureText: false,
+          textAlign: TextAlign.left,
+          style: const TextStyle(
             fontSize: 12,
-                fontWeight: FontWeight.w600,
-                 fontFamily: "SFProDisplay",
-                 fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w600,
+            fontFamily: "SFProDisplay",
+            fontStyle: FontStyle.italic,
           ),
-          filled: true,
-          fillColor: searchButtonColor1,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25),
-           // borderSide: BorderSide.none
-            borderSide: const BorderSide(color: 
-            Colors.white,
-            width: 1),
-            
-            
+          decoration: InputDecoration(
+            hintText: text,
+            hintStyle: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              fontFamily: "SFProDisplay",
+              fontStyle: FontStyle.italic,
+            ),
+            filled: true,
+            fillColor: Colors.transparent,
+            border: InputBorder.none,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(25),
+              borderSide: const BorderSide(
+                color: Colors.transparent,
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(25),
+              borderSide: const BorderSide(
+                color: Colors.transparent,
+              ),
+              
+            ),
+            prefixIcon: const Padding(
+              padding: EdgeInsets.only(left: 12),
+              child: Icon(
+                Icons.search,
+                color: Colors.black54, 
+              ),
+            ),
           ),
         ),
-        // textAlign: TextAlign.center,
       ),
     );
   }

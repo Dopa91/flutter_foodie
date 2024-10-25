@@ -15,8 +15,8 @@ class RecipeContainer extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8), // Verschwommenheit
         child: Container(
-          height: 500, // Höhe Container
-          width: 360,
+          height: 455, // Höhe Container
+          width: 370,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.white, width: 0.1), // Weiße Umrandung
             borderRadius: BorderRadius.circular(16), // Runder Rahmen    
@@ -26,7 +26,7 @@ class RecipeContainer extends StatelessWidget {
             ),
           ),
           child: Container(
-            color: const Color.fromARGB(170, 100, 62, 41).withOpacity(0.7), // Transparenz
+            color: const Color.fromARGB(219, 131, 85, 61).withOpacity(0.8), // Transparenz
             child: const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
@@ -35,14 +35,20 @@ class RecipeContainer extends StatelessWidget {
                   Text(
                     "Zutaten:",
                     style: TextStyle(
-                      color: Color.fromARGB(255, 26, 14, 3),
-                      fontWeight: FontWeight.w900,
-                                fontSize: 22,
+                      color: buttonColorRecipeFeed1,
+                      fontWeight: FontWeight.w600,
+                                fontSize: 26,
                                 fontStyle: FontStyle.italic,
                                 fontFamily: "SFProDisplay",
+                                shadows: [
+                        Shadow(
+                          blurRadius: 3,
+                          color: buttonColorRecipeFeed1,
+                          offset: Offset(0, 1)),
+                      ],
+                    ),    
                     ),
-                  ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 Row(
                   children: [
                    Text(
@@ -61,15 +67,15 @@ class RecipeContainer extends StatelessWidget {
                      textAlign: TextAlign.end,
                      style: TextStyle(
                        color: buttonColorRecipeFeed1,
-                       fontWeight: FontWeight.w500,
-                                 fontSize: 18,
+                       fontWeight: FontWeight.w600,
+                                 fontSize: 17,
                                  fontStyle: FontStyle.italic,
                                  fontFamily: "SFProDisplay",
                      ),
                    ),
                   VerticalDivider( thickness: 2,
                   color: buttonColorRecipeFeed1), // noch nicht fertig!!!
-                  SizedBox(height:10),
+                 // SizedBox(height:10),
                   Text(
                     "Hünerbrustfilet \n"
                     "Naturjoghurt\n"
@@ -86,10 +92,11 @@ class RecipeContainer extends StatelessWidget {
                     "Koriander (zum Garnieren)",
                     style: TextStyle(
                       color: buttonColorRecipeFeed1,
-                      fontWeight: FontWeight.w500,
-                                fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                                fontSize: 16.5,
                                 fontStyle: FontStyle.italic,
                                 fontFamily: "SFProDisplay",
+                                
                     ),
                   ),
                 ],

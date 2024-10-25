@@ -21,14 +21,14 @@ class FoodContainerWidget extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Center(
           child: Container(
-            height: 90,
+            height: 80,
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 0.1),
-              borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Colors.white, width: 0.2),
+              borderRadius: BorderRadius.circular(16),
               gradient: const LinearGradient(
                 colors: [
-                  Color.fromARGB(170, 100, 62, 41),
-                  Color.fromARGB(170, 100, 62, 41),
+                  Color.fromARGB(160, 100, 62, 41),
+                  Color.fromARGB(160, 100, 62, 41),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -42,7 +42,7 @@ class FoodContainerWidget extends StatelessWidget {
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
                         image: AssetImage(foodRecipe.imagePath),
                         fit: BoxFit.cover,
@@ -52,7 +52,7 @@ class FoodContainerWidget extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 15 ), 
+                    padding: const EdgeInsets.only(left: 0, right: 15 ), 
                     child: Column( // rechter Inhalt
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,8 +64,8 @@ class FoodContainerWidget extends StatelessWidget {
                               foodRecipe.imageTitle,
                               style: const TextStyle(
                                 color: Color.fromARGB(255, 234, 220, 208),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
                                 fontStyle: FontStyle.italic,
                                 fontFamily: "SFProDisplay",
                               ),
@@ -82,8 +82,9 @@ class FoodContainerWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             const Icon(Icons.schedule, // Time Icon
-                              size: 20,
-                              color: Color.fromARGB(255, 234, 220, 208),
+                              size: 18,
+                              color: Color.fromARGB(255, 218, 197, 179),
+
                             ),
                            const SizedBox(width: 4),                            
                             Text( // Zeit
@@ -115,7 +116,7 @@ class FoodContainerWidget extends StatelessWidget {
                 ),
               ],
             ),
-                  ),
+         ),
       ),
      )
   );
