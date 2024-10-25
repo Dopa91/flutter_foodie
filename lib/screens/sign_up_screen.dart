@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
 import "package:foodie_screen/feautures/login_button.dart";
-import "package:foodie_screen/screens/feed_screen.dart";
+import "package:foodie_screen/screens/buttom_navigator.dart";
 import "package:foodie_screen/feautures/mail_button.dart";
 import "package:foodie_screen/feautures/password_button.dart";
 
@@ -76,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                 text: "Sign Up!",
                 onPressed: () {Navigator.push(
                       context, MaterialPageRoute(
-                        builder: (context) => const FeedScreen( 
+                        builder: (context) => const ButtonNavigator( 
                       )
                       )
                 );

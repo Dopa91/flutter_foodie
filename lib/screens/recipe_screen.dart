@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/portion_counter.dart';
+import 'package:foodie_screen/models/portion_counter.dart';
 import 'package:foodie_screen/screens/preperation_screen.dart';
 import 'package:foodie_screen/widget/recipe_container_widget.dart';
 

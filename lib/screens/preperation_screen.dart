@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:foodie_screen/config/colors.dart';
 import 'package:foodie_screen/widget/preparation_container_widget.dart';
 
 class PreparationScreen extends StatelessWidget {
@@ -11,18 +12,33 @@ class PreparationScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/chickebackround.png"),
+            image: AssetImage("assets/images/butterchicken.png"),
             fit: BoxFit.cover,
           ),
-        ),
-        child: const SingleChildScrollView(
+        ),    child: const SingleChildScrollView(
           child: Column(
             children: [
-              PreperationContainer(
-                title: "Step 1 / Marinade:",
-                description: "• Hühnerbrust in Würfel schneiden.\n"
-                             "• Mit Joghurt, Salz, Pfeffer, Garam Masala und Kreuzkümmel marinieren.\n"
-                             "• Mindestens 30 Minuten ziehen lassen.",
+              SizedBox( height: 50),
+             Padding(
+                padding:  EdgeInsets.symmetric(vertical: 20.0),
+                child: Text(
+                  "Zubereitung:",
+                  style: TextStyle(
+                  fontSize: 50,
+                  color: buttonColorRecipeFeed1,
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: "SFProDisplay",
+                  shadows: [
+                    Shadow(
+                      blurRadius: 8,
+                      color: fontColor,
+                      offset:  Offset(2, 2),
+                    ),
+                  ],
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
               PreperationContainer(
                 title: "Step 2 / Zwiebel und Gewürze anbraten:",
@@ -45,12 +61,57 @@ class PreparationScreen extends StatelessWidget {
                 title: "Step 5 / Anrichten:",
                 description: "• Mit frischem Koriander garnieren.\n"
                              "• Am besten mit Reis oder Naan-Brot servieren.",
+              ),  SizedBox(height: 20), 
+              //  Text
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Tipps: ",
+                      style: TextStyle(
+                        color: Colors.red, 
+                         fontWeight: FontWeight.w600,
+                         fontStyle: FontStyle.italic,
+                         fontFamily: "SFProDisplay",
+                        fontSize: 18,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "Für eine scharfe Variante mehr Chili verwenden.",
+                        style: TextStyle(
+                          color: Colors.white, 
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                         fontStyle: FontStyle.italic,
+                         fontFamily: "SFProDisplay",
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              // Tipps Container
-              PreperationContainer(
-                title: "Tipps:",
-                description: "Für eine scharfe Variante mehr Chili verwenden.",
+              SizedBox(height: 10),
+              Text(
+                "Guten \nAppetit!",
+                style: TextStyle(
+                  fontSize: 70,
+                  color: buttonColorRecipeFeed1,
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: "SFProDisplay",
+                  shadows: [
+                    Shadow(
+                      blurRadius: 8,
+                      color: Color.fromARGB(255, 201, 142, 97),
+                      offset: Offset(2, 2),
+                    ),
+                  ],
+                ),
               ),
+              SizedBox(height: 50), 
             ],
           ),
         ),

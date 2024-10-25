@@ -26,7 +26,7 @@ class RecipeContainer extends StatelessWidget {
             ),
           ),
           child: Container(
-            color: const Color.fromARGB(219, 131, 85, 61).withOpacity(0.8), // Transparenz
+            color: Colors.transparent.withOpacity(0.5), // Transparenz
             child: const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
@@ -73,8 +73,10 @@ class RecipeContainer extends StatelessWidget {
                                  fontFamily: "SFProDisplay",
                      ),
                    ),
-                  VerticalDivider( thickness: 2,
-                  color: buttonColorRecipeFeed1), // noch nicht fertig!!!
+                  SizedBox( height: 340,
+                    child: VerticalDivider( thickness: 2, width: 10,
+                    color: buttonColorRecipeFeed1),
+                  ), // noch nicht fertig!!!
                  // SizedBox(height:10),
                   Text(
                     "Hünerbrustfilet \n"

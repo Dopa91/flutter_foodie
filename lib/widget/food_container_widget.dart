@@ -23,16 +23,9 @@ class FoodContainerWidget extends StatelessWidget {
           child: Container(
             height: 80,
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 0.2),
-              borderRadius: BorderRadius.circular(16),
-              gradient: const LinearGradient(
-                colors: [
-                  Color.fromARGB(160, 100, 62, 41),
-                  Color.fromARGB(160, 100, 62, 41),
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
+              border: Border.all(color: const Color.fromARGB(255, 34, 32, 32), width: 0.3),
+              borderRadius: BorderRadius.circular(14),
+                color: Colors.transparent.withOpacity(0.6)
             ),
             child: Row( // Main Row
               children: [

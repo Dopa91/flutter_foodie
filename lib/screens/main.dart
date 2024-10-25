@@ -3,11 +3,11 @@ import 'package:foodie_screen/config/themes.dart';
 import 'package:foodie_screen/screens/main_screen.dart';
 
 void main() {
-  runApp(const FeedScreen());
+  runApp(const MyApp());
 }
 
-class FeedScreen extends StatelessWidget {
-  const FeedScreen({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

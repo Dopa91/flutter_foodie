@@ -16,39 +16,38 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
-int _selectedIndex = 0;
-
-void _navigateBottnBar(int index){
-  setState(() {
-    _selectedIndex = index;
-    if (_selectedIndex == 1) {
-     Navigator.of(context).push(MaterialPageRoute(builder:(context) => const RecipeScreen(foodItem: " Fav." ),
-       ));
-    }
-  });
-}
+// int _selectedIndex = 0;
+// void _navigateBottnBar(int index){
+//   setState(() {
+//     _selectedIndex = index;
+//     if (_selectedIndex == 1) {
+//      Navigator.of(context).push(MaterialPageRoute(builder:(context) => const RecipeScreen(foodItem: " Fav." ),
+//        ));
+//     }
+//   });
+// }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: backroundColor2,
-    bottomNavigationBar: BottomNavigationBar(
-      backgroundColor:searchButtonColor1, 
-      fixedColor:
-                const Color.fromARGB(255, 174, 90, 11), 
+    // bottomNavigationBar: BottomNavigationBar(
+    //   backgroundColor:searchButtonColor1, 
+    //   fixedColor:
+    //             const Color.fromARGB(255, 174, 90, 11), 
       
       
       
-      currentIndex: _selectedIndex,
-      onTap: _navigateBottnBar,
-      type: BottomNavigationBarType.fixed,
-            items: const [
-       BottomNavigationBarItem(icon: Icon(Icons.restaurant), label: "Heute" ),
-       BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Favorit"),
-       BottomNavigationBarItem(icon: Icon(Icons.public), label: "Entdecken"),
-       BottomNavigationBarItem(icon: Icon(Icons.person), label: "Person"),
+    //   currentIndex: _selectedIndex,
+    //   onTap: _navigateBottnBar,
+    //   type: BottomNavigationBarType.fixed,
+    //         items: const [
+    //    BottomNavigationBarItem(icon: Icon(Icons.restaurant), label: "Heute" ),
+    //    BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Favorit"),
+    //    BottomNavigationBarItem(icon: Icon(Icons.public), label: "Entdecken"),
+    //    BottomNavigationBarItem(icon: Icon(Icons.person), label: "Person"),
 
-    ],),
+    // ],),
     //   appBar: AppBar( actions: [GestureDetector(
     //     onTap: (){ Navigator.push(context, MaterialPageRoute(
     //       builder: (context)=> 
