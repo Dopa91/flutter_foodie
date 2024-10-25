@@ -11,19 +11,18 @@ dependencies:
     sdk: flutter
   simple_search_dropdown: ^5.2.0
   flutter_lints: ^4.0.0
-  flutter_launcher_icons: ^0.14.1
   social_login_buttons: ^1.0.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  
+  flutter_launcher_icons: ^0.14.1
 
 
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: assets/icon/iconlogo.png
+  image_path: "assets/icon/icon.png"
 
 flutter:
   uses-material-design: true
