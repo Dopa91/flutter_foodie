@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'recipe_screen.dart';
+import 'package:foodie_screen/screens/favorit_screen.dart';
+import 'package:foodie_screen/screens/feed_screen.dart';
+import 'package:foodie_screen/screens/profil_screen.dart';
+import 'package:foodie_screen/screens/spot_screen.dart';
 import 'package:foodie_screen/config/colors.dart'; 
 
 class ButtonNavigator extends StatefulWidget {
@@ -8,15 +11,14 @@ class ButtonNavigator extends StatefulWidget {
   @override
   _ButtonNavigator createState() => _ButtonNavigator();
 }
-
 class _ButtonNavigator extends State<ButtonNavigator> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    const FeedScreen(),
-    const RecipeScreen(foodItem: "Favoriten"),
-    const RecipeScreen(foodItem: "Entdecken"),
-    const RecipeScreen(foodItem: "Profil"),
+     const FeedScreen(),
+    const FavoritScreen(),
+    const SpotScreen(),
+    const ProfilScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -42,17 +44,6 @@ class _ButtonNavigator extends State<ButtonNavigator> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
         ],
       ),
-    );
-  }
-}
-
-class FeedScreen extends StatelessWidget {
-  const FeedScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Feed Screen"), // 
     );
   }
 }

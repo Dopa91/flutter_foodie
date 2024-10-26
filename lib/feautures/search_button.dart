@@ -12,7 +12,7 @@ class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 0),
+      padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 15),
       child: Container(
         decoration: BoxDecoration(
           color: searchButtonColor1,
@@ -59,7 +59,7 @@ class SearchButton extends StatelessWidget {
               
             ),
             prefixIcon: const Padding(
-              padding: EdgeInsets.only(left: 12),
+              padding: EdgeInsets.only(left: 20),
               child: Icon(
                 Icons.search,
                 color: Colors.black54, 

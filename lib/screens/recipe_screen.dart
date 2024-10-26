@@ -34,36 +34,39 @@ class RecipeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: const TextStyle(         
                       fontSize: 40,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w800,
                       fontStyle: FontStyle.italic,
                       fontFamily: "SFProDisplay",
-                      color: Color.fromARGB(255, 100, 71, 39),
+                      color: Color.fromARGB(255, 255, 248, 243),
                       shadows:[
-                        Shadow(
-                          blurRadius: 6,
-                          color: fontColor,
-                          offset: Offset(1, 1)),
-                   ],
-                ),
-              ),
+                          Shadow(
+                          blurRadius: 3,
+                          color: Color.fromARGB(255, 255, 248, 243),
+                          offset: Offset(1, 1)
+                          ),
+                      ],
+                     ), 
+                    ),   
                const SizedBox(height: 20),
              const RecipeContainer(),
             const SizedBox(height: 20),
-                   
-           const Text( " Portion", style: TextStyle(  fontSize: 36,
-                      fontWeight: FontWeight.w600,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: "SFProDisplay",
-                      color: Color.fromARGB(207, 233, 229, 225),
-                      shadows:[
-                        Shadow(
-                          blurRadius: 6,
-                          color: Color.fromARGB(255, 202, 190, 179),
-                          offset: Offset(1, 1),
-                 ),
-               ],
-              ),
-             ),
+                 const Divider( thickness: 0.7, 
+                    color: Color.fromARGB(255, 0, 0, 0)),
+           Container(
+             child: const Text( " Portion", style: TextStyle(  fontSize: 36,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: "SFProDisplay",
+                        color: Color.fromARGB(255, 255, 252, 249),
+                        shadows:[
+                          Shadow(
+                            blurRadius: 4,
+                            color: Color.fromARGB(255, 255, 252, 249),
+                   ),
+                 ],
+                ),
+               ),
+           ),
              PortionCounter(),
                     GestureDetector(
                 onTap: () {
@@ -75,12 +78,12 @@ class RecipeScreen extends StatelessWidget {
                   );
                 },
                   child: const Center(
-                    child: Text( "Zu der Zubereitung", style: TextStyle( 
+                    child: Text( " Zu der Zubereitung", style: TextStyle( 
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                       fontStyle: FontStyle.italic,
                       fontFamily: "SFProDisplay",
-                      color: Color.fromARGB(207, 233, 229, 225),
+                      color: Color.fromARGB(2255, 255, 252, 249),
                       decoration: TextDecoration.underline, 
                       decorationColor:Color.fromARGB(255, 227, 206, 188),
                    ),

@@ -4,6 +4,7 @@ import "package:foodie_screen/feautures/mail_button.dart";
 import "package:foodie_screen/feautures/login_button.dart";
 import "package:foodie_screen/feautures/password_button.dart";
 import "package:foodie_screen/screens/sign_up_screen.dart";
+import "package:foodie_screen/widget/richtlinien_widget.dart";
 
 
 class MainScreen extends StatelessWidget {
@@ -45,7 +46,7 @@ class MainScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Divider(
-                thickness: 1,
+                thickness: 0.9,
                 height: 20,
                 indent: 20, // abstand links
                 endIndent: 20, // abstand rechts
@@ -55,14 +56,24 @@ class MainScreen extends StatelessWidget {
               const SizedBox(height: 0),
               const PasswordButton(text: "Password"),
               const SizedBox(height: 5),
+              const SizedBox(height: 4),
+              const Divider(
+                thickness: 0.9,
+                height: 20,
+                indent: 20, // abstand links
+                endIndent: 20, // abstand rechts
+                color: Color.fromARGB(255, 103, 71, 31),
+              ),
+             const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: LoginButton(
                 text: "Sign in!",
                 onPressed: () {
                 },
-                                 ),
+               ),
               ),
+              const SizedBox(height: 5),
               GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -78,15 +89,8 @@ class MainScreen extends StatelessWidget {
                     fontWeight: FontWeight.normal),
                 textAlign: TextAlign.right,
               ),
-            ),const SizedBox(height: 20),
-              const Divider(
-                thickness: 1,
-                height: 20,
-                indent: 20, // abstand links
-                endIndent: 20, // abstand rechts
-                color: Color.fromARGB(255, 103, 71, 31),
-              ),
-             const SizedBox(height: 20),
+            ),
+            const SizedBox(height: 20),
               Row(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [
@@ -143,6 +147,8 @@ class MainScreen extends StatelessWidget {
                     ),
                   ],
                  ),
+                 const SizedBox(height: 25),
+                const RichtlinienWidget(),
                 ],
                ),
               )

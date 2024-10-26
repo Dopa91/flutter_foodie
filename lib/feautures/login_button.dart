@@ -26,7 +26,7 @@ class LoginButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         child: Text(
-          text,style: const TextStyle(
+          text,style:  TextStyle(
                                 color: Color.fromARGB(255, 45, 25, 7),
                                 fontWeight: FontWeight.w600,
                                 fontSize: 14,

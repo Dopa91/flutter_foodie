@@ -1,9 +1,10 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
 import "package:foodie_screen/feautures/login_button.dart";
-import "package:foodie_screen/screens/buttom_navigator.dart";
+import "package:foodie_screen/feautures/buttom_navigator.dart";
 import "package:foodie_screen/feautures/mail_button.dart";
 import "package:foodie_screen/feautures/password_button.dart";
+import "package:foodie_screen/widget/richtlinien_widget.dart";
 
 
 class SignUpScreen extends StatelessWidget {
@@ -47,12 +48,12 @@ class SignUpScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                  fontFamily: "SFProDisplay",
                  fontStyle: FontStyle.italic,
-                color: Colors.black,
+                color: Color.fromARGB(255, 80, 57, 50),
               ),
             ),
               const SizedBox(height: 20),
               const Divider(
-                thickness: 1,
+                thickness: 0.9,
                 height: 20,
                 indent: 20, // abstand links
                 endIndent: 20, // abstand rechts
@@ -64,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
               const PasswordButton(text: "Repeat Password"),
               const SizedBox(height: 20),
                const Divider(
-                thickness: 1,
+                thickness: 0.9,
                 height: 20,
                 indent: 20, // abstand links
                 endIndent: 20, // abstand rechts
@@ -81,7 +82,7 @@ class SignUpScreen extends StatelessWidget {
                       )
                 );
                 },
-                                 ),
+               ),
               ),
                const SizedBox(height: 30),
               Row(
@@ -135,15 +136,16 @@ class SignUpScreen extends StatelessWidget {
         child: Image.asset(
           "assets/icon/Apple_logo_white.svg.png",
           height: 30,
-                 ),
+                  ),
+                  ),
                 ),
-              ),
-            ],
-          ),
-       ],
+              ],
+            ),
+            const SizedBox(height: 25),
+            const RichtlinienWidget(),
+          ],
+        ),
       ),
-     ),
     );
   }
 }
-

@@ -8,13 +8,9 @@ import 'package:foodie_screen/widget/food_container_widget.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
-
-
-
   @override
   State<FeedScreen> createState() => _FeedScreenState();
 }
-
 class _FeedScreenState extends State<FeedScreen> {
 // int _selectedIndex = 0;
 // void _navigateBottnBar(int index){
@@ -26,7 +22,6 @@ class _FeedScreenState extends State<FeedScreen> {
 //     }
 //   });
 // }
-
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +94,6 @@ class _FeedScreenState extends State<FeedScreen> {
                   padding: EdgeInsets.zero,
                   scrollDirection: Axis.vertical,
                   itemCount: foodRecipe.length,
-                  
                   itemBuilder: (context, index) {
                     final foodItem = foodRecipe[index];
                     return FoodContainerWidget(

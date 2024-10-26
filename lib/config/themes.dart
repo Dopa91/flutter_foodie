@@ -6,7 +6,7 @@ ThemeData myTheme= ThemeData(textTheme: const TextTheme(
                       fontWeight: FontWeight.w900,
                       fontStyle: FontStyle.italic,
                       fontFamily: "SFProDisplay",
-                      color: Color.fromARGB(255, 100, 71, 39),shadows:[
+                      color: Color.fromARGB(255, 80, 57, 50),shadows:[
                         Shadow(
                           blurRadius: 10,
                           color: Colors.black,

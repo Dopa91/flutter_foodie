@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/config/colors.dart';
 import 'package:foodie_screen/widget/preparation_container_widget.dart';
 
 class PreparationScreen extends StatelessWidget {
@@ -15,54 +13,58 @@ class PreparationScreen extends StatelessWidget {
             image: AssetImage("assets/images/butterchicken.png"),
             fit: BoxFit.cover,
           ),
-        ),    child: const SingleChildScrollView(
+        ),
+        child: const SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox( height: 50),
-             Padding(
-                padding:  EdgeInsets.symmetric(vertical: 20.0),
+              SizedBox(height: 50),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
                 child: Text(
                   "Zubereitung:",
                   style: TextStyle(
-                  fontSize: 50,
-                  color: buttonColorRecipeFeed1,
-                  fontWeight: FontWeight.w400,
-                  fontStyle: FontStyle.italic,
-                  fontFamily: "SFProDisplay",
-                  shadows: [
-                    Shadow(
-                      blurRadius: 8,
-                      color: fontColor,
-                      offset:  Offset(2, 2),
-                    ),
-                  ],
+                    fontSize: 50,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontWeight: FontWeight.w600,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: "SFProDisplay",
+                      decoration: TextDecoration.underline, 
+                      decorationColor:Color.fromARGB(255, 246, 246, 246),
+                    shadows: [
+                      Shadow(
+                        blurRadius: 4,
+                        color: Color.fromARGB(255, 203, 197, 191),
+                        offset: Offset(1, 1),
+
+                      ),
+                    ],
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
-              PreperationContainer(
-                title: "Step 2 / Zwiebel und Gewürze anbraten:",
+              PreparationContainer(
+                title: "Step 2 / Zwiebel & Gewürze anbraten:",
                 description: "• Butter in einer Pfanne erhitzen.\n"
                              "• Zwiebel, Knoblauch und Ingwer hinzufügen.\n"
                              "• Paprikapulver und Chili dazugeben.",
               ),
-              PreperationContainer(
+              PreparationContainer(
                 title: "Step 3 / Hähnchen braten:",
                 description: "• Marinierte Hühnerstücke in die Pfanne geben.\n"
                              "• Bis sie goldbraun sind.",
               ),
-              PreperationContainer(
+              PreparationContainer(
                 title: "Step 4 / Sauce zubereiten:",
                 description: "• Tomatenpassata hinzufügen.\n"
-                             "• Gut vermischen und nach Belieben mit Sahne verfeinern.\n"
+                             "• Gut vermischen und nach Belieben mit Sahne \nverfeinern.\n"
                              "• Mit Salz und Pfeffer abschmecken.",
               ),
-              PreperationContainer(
+              PreparationContainer(
                 title: "Step 5 / Anrichten:",
                 description: "• Mit frischem Koriander garnieren.\n"
                              "• Am besten mit Reis oder Naan-Brot servieren.",
-              ),  SizedBox(height: 20), 
-              //  Text
+              ),
+              SizedBox(height: 20),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(
@@ -71,22 +73,24 @@ class PreparationScreen extends StatelessWidget {
                     Text(
                       "Tipps: ",
                       style: TextStyle(
-                        color: Colors.red, 
-                         fontWeight: FontWeight.w600,
-                         fontStyle: FontStyle.italic,
-                         fontFamily: "SFProDisplay",
+                        color: Colors.red,
+                        fontWeight: FontWeight.w600,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: "SFProDisplay",
                         fontSize: 18,
+                      decoration: TextDecoration.underline, 
+                      decorationColor:Color.fromARGB(255, 203, 20, 20),
                       ),
                     ),
                     Expanded(
                       child: Text(
                         "Für eine scharfe Variante mehr Chili verwenden.",
                         style: TextStyle(
-                          color: Colors.white, 
+                          color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
-                         fontStyle: FontStyle.italic,
-                         fontFamily: "SFProDisplay",
+                          fontStyle: FontStyle.italic,
+                          fontFamily: "SFProDisplay",
                         ),
                       ),
                     ),
@@ -95,23 +99,23 @@ class PreparationScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "Guten \nAppetit!",
+                " Guten\nAppetit!",
                 style: TextStyle(
                   fontSize: 70,
-                  color: buttonColorRecipeFeed1,
+                  color: Color.fromARGB(255, 255, 255, 255),
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.italic,
                   fontFamily: "SFProDisplay",
                   shadows: [
                     Shadow(
-                      blurRadius: 8,
-                      color: Color.fromARGB(255, 201, 142, 97),
+                      blurRadius: 10,
+                      color: Color.fromARGB(255, 255, 255, 255),
                       offset: Offset(2, 2),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 50), 
+              SizedBox(height: 50),
             ],
           ),
         ),
