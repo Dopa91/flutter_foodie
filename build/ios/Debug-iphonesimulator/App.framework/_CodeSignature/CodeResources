@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		cbyvjr+RYKVcXvWz6snYprULeDM=
+		OdeFlcASOZbVh+YYcqluejPP2is=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		lsbftR61b6a0X8tX+/Q2wm7y9Yc=
+		ZR4BacBw3BhiaxOzV16V6I1ktxc=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -71,6 +71,10 @@
 		<key>flutter_assets/assets/icon/icon.png</key>
 		<data>
 		K+JOWnULg8kD/umYfmuhFoSp/P8=
+		</data>
+		<key>flutter_assets/assets/icon/image.png</key>
+		<data>
+		ikR5Zx9Xh6WT6N4W6AW7GdM0hZ0=
 		</data>
 		<key>flutter_assets/assets/images/backroundpanck.png</key>
 		<data>
@@ -154,7 +158,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		EDoiTQCd6V5UBD12uwjM+woMJhk=
+		vaGpzRp9kMsZzTBHOOVzpJHegqc=
 		</data>
 		<key>flutter_assets/packages/social_login_buttons/lib/assets/2.0x/apple-black-logo.png</key>
 		<data>
@@ -255,14 +259,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JSAiH3gzAF46pApX1IkUqK79IBEohv7QjQo+YzbsKSI=
+			aYp5ehieL0Tq0qrjCLfi3ywtG4ubovVnhL2HPaoVybY=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cg7RetgQFPrEN49UjSFJw9lrfo3YbmV0itvci3KE938=
+			Lyr0QV3+ddXtgvKi1QvzbUg0wJX2NC5xur2U0yqtRgo=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -361,6 +365,13 @@
 			<key>hash2</key>
 			<data>
 			tAmrJDxszezGQnmMAiQryj3ZIkOGCo6wLzPBooEmt5A=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/icon/image.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9r5uHOhSH5lZoJ44ZJzbshhM+Ir8lGq3keuUXA3poUQ=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/backroundpanck.png</key>
@@ -507,7 +518,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AY4+3zsJ3Ha49VCGI5nxBy5kQLHpDlwYfEi25aLaftY=
+			qBb00xf+vw4XWYi68Tks0f3V9KC5c3MDakBBvt3MR/c=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/social_login_buttons/lib/assets/2.0x/apple-black-logo.png</key>
