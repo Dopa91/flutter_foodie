@@ -1,7 +1,6 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/config/colors.dart';
 
 class RecipeContainer extends StatelessWidget {
   const RecipeContainer({
@@ -15,8 +14,8 @@ class RecipeContainer extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8), // Verschwommenheit
         child: Container(
-          height: 455, // Höhe Container
-          width: 370,
+          height: 425, // Höhe Container
+          width: 500,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.white, width: 0.1), // Weiße Umrandung
             borderRadius: BorderRadius.circular(16), // Runder Rahmen    
@@ -35,15 +34,17 @@ class RecipeContainer extends StatelessWidget {
                   Text(
                     "Zutaten:",
                     style: TextStyle(
-                      color: buttonColorRecipeFeed1,
+                      color: Color.fromARGB(255, 255, 252, 249),
                       fontWeight: FontWeight.w600,
-                                fontSize: 26,
+                                fontSize: 28,
                                 fontStyle: FontStyle.italic,
                                 fontFamily: "SFProDisplay",
+                                decoration: TextDecoration.underline, 
+                                decorationColor:Color.fromARGB(255, 225, 218, 211),
                                 shadows: [
                         Shadow(
                           blurRadius: 3,
-                          color: buttonColorRecipeFeed1,
+                          color: Color.fromARGB(255, 255, 252, 249),
                           offset: Offset(0, 1)),
                       ],
                     ),    
@@ -66,7 +67,7 @@ class RecipeContainer extends StatelessWidget {
                      "         2 EL\n",
                      textAlign: TextAlign.end,
                      style: TextStyle(
-                       color: buttonColorRecipeFeed1,
+                       color: Color.fromARGB(255, 255, 252, 249),
                        fontWeight: FontWeight.w600,
                                  fontSize: 17,
                                  fontStyle: FontStyle.italic,
@@ -74,8 +75,8 @@ class RecipeContainer extends StatelessWidget {
                      ),
                    ),
                   SizedBox( height: 340,
-                    child: VerticalDivider( thickness: 2, width: 10,
-                    color: buttonColorRecipeFeed1),
+                    child: VerticalDivider( thickness: 1, width: 17,
+                    color: Color.fromARGB(255, 255, 252, 249)),
                   ), // noch nicht fertig!!!
                  // SizedBox(height:10),
                   Text(
@@ -93,8 +94,8 @@ class RecipeContainer extends StatelessWidget {
                     "Sahne (optional)\n"
                     "Koriander (zum Garnieren)",
                     style: TextStyle(
-                      color: buttonColorRecipeFeed1,
-                      fontWeight: FontWeight.w700,
+                      color: Color.fromARGB(255, 255, 252, 249),
+                      fontWeight: FontWeight.w500,
                                 fontSize: 16.5,
                                 fontStyle: FontStyle.italic,
                                 fontFamily: "SFProDisplay",

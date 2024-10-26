@@ -21,11 +21,11 @@ class FoodContainerWidget extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Center(
           child: Container(
-            height: 80,
+            height: 85,
             decoration: BoxDecoration(
-              border: Border.all(color: const Color.fromARGB(255, 34, 32, 32), width: 0.3),
+              border: Border.all(color: const Color.fromARGB(255, 34, 32, 32), width: 0.2),
               borderRadius: BorderRadius.circular(14),
-                color: Colors.transparent.withOpacity(0.6)
+                color: const Color.fromARGB(55, 74, 60, 60).withOpacity(0.6)
             ),
             child: Row( // Main Row
               children: [

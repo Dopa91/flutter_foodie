@@ -1,12 +1,11 @@
-
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class PreperationContainer extends StatelessWidget {
+class PreparationContainer extends StatelessWidget {
   final String title;
   final String description;
 
-  const PreperationContainer({
+  const PreparationContainer({
     super.key,
     required this.title,
     required this.description,
@@ -15,20 +14,16 @@ class PreperationContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(15), // Runder Rahmen
+      borderRadius: BorderRadius.circular(15),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10), // Verschwommenheit
+        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
-          margin: const EdgeInsets.symmetric(vertical: 14 , horizontal: 14),
+          margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 14),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: Colors.transparent.withOpacity(0.5), // Transparente Hintergrundfarbe
-            borderRadius: BorderRadius.circular(16), // Runder Rahmen    
-            // border: Border.all(color:
-            //  Colors.white.withOpacity(0.0),
-            //   width: 1
-            //   ), // Weiße Umrandung
-            ),
+            color: Colors.transparent.withOpacity(0.5),
+            borderRadius: BorderRadius.circular(16),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
