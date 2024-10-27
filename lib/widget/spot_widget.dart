@@ -35,7 +35,7 @@ String picture;
           style: const TextStyle(
           color: Colors.white,
           fontSize: 22,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w500,
           fontStyle: FontStyle.italic,
           fontFamily: "SFProDisplay",               
           ),

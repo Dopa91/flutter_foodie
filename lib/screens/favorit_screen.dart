@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
 import "package:foodie_screen/feautures/fav_button.dart";
 import "package:foodie_screen/feautures/search_button.dart";
+import "package:foodie_screen/screens/new_collection_screen.dart";
 import "package:foodie_screen/widget/fav_container%20widget.dart";
 
 class FavoritScreen extends StatelessWidget {
@@ -37,11 +38,16 @@ class FavoritScreen extends StatelessWidget {
                       onPressed: () {},
                                        ),
                    ),
-                  SizedBox(width: 0),
+                  const SizedBox(width: 0),
                   IconButton(
                     icon: const Icon(Icons.add, size: 40, color: Colors.black45,),
                     color: Colors.white,
-                    onPressed: () {
+                     onPressed: () {
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const NewCollectionScreen()),
+                      );
                     },
                   ),
                 ],
@@ -50,7 +56,7 @@ class FavoritScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
                   margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 14),
-                  height: 500,
+                  height: 490,
                   width: double.infinity,
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
@@ -66,7 +72,7 @@ class FavoritScreen extends StatelessWidget {
                           Expanded(
                             child: FavContainer(
                               onTap: () {
-                                print("Container 1 wurde getippt!");
+                                print(" ");
                               },
                               picture1: "assets/images/pizza.png",
                               picture2: "assets/images/baklava.png",

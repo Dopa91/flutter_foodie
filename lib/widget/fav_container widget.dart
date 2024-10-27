@@ -96,7 +96,7 @@ class FavContainer extends StatelessWidget {
                     text,
                     style: const TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w500,
                       fontStyle: FontStyle.italic,
                       fontFamily: "SFProDisplay",
                       color: Color.fromARGB(255, 255, 249, 249),            
