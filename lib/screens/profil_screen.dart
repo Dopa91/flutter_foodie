@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
 import "package:foodie_screen/feautures/profile_button.dart";
+import "package:foodie_screen/screens/favorit_screen.dart";
 
 class ProfilScreen extends StatelessWidget {
   const ProfilScreen({super.key});
@@ -106,7 +107,12 @@ class ProfilScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ProfileButton(
               text: "Gespeicherte Rezepte",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FavoritScreen()),
+                );
+              },
             ),
             const SizedBox(height: 20),
             ProfileButton(
