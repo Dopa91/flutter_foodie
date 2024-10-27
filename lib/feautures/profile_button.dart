@@ -26,14 +26,16 @@ class ProfileButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         child: Text(
-          text,style:  TextStyle(
-                                color: Color.fromARGB(255, 45, 25, 7),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                                fontStyle: FontStyle.italic,
-                                fontFamily: "SFProDisplay",
-                              ),
-                            ),
+          text,
+          style:  
+          const TextStyle(
+             color: Color.fromARGB(255, 45, 25, 7),
+            fontWeight: FontWeight.w500,
+            fontSize: 14,
+            fontStyle: FontStyle.italic,
+             fontFamily: "SFProDisplay",
+             ),
+           ),
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 15),
           backgroundColor: signInBtnColor,
