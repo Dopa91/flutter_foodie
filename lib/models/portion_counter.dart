@@ -54,6 +54,8 @@ class _PortionCounterState extends State<PortionCounter> {
             ),
             onPressed: _increment,
           ),
+          const SizedBox(height: 10),
+
         ],
       ),
     );
