@@ -34,46 +34,47 @@ class RecipeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: const TextStyle(         
                       fontSize: 40,
-                      fontWeight: FontWeight.w800,
+                      fontWeight: FontWeight.w700,
                       fontStyle: FontStyle.italic,
                       fontFamily: "SFProDisplay",
-                      color: Color.fromARGB(255, 255, 248, 243),
+                      color: Color.fromARGB(255, 255, 252, 249),
                       shadows:[
                           Shadow(
-                          blurRadius: 3,
-                          color: Color.fromARGB(255, 255, 248, 243),
-                          offset: Offset(1, 1)
+                          blurRadius: 1,
+                          color: Color.fromARGB(255, 255, 252, 249),
+                          offset: Offset(0, 1)
                           ),
                       ],
                      ), 
                     ),   
-               const SizedBox(height: 20),
-             const RecipeContainer(),
-            const SizedBox(height: 20),
-                 const Divider( thickness: 0.7, 
+              const SizedBox(height: 20),
+              const RecipeContainer(),
+              const SizedBox(height: 30),
+              const Divider( thickness: 0.7, 
                     color: Color.fromARGB(255, 0, 0, 0)),
-           Container(
-             child: const Text( " Portion", style: TextStyle(  fontSize: 36,
-                        fontWeight: FontWeight.w600,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: "SFProDisplay",
-                        color: Color.fromARGB(255, 255, 252, 249),
-                        shadows:[
-                          Shadow(
-                            blurRadius: 4,
-                            color: Color.fromARGB(255, 255, 252, 249),
-                   ),
-                 ],
-                ),
-               ),
-           ),
+              const Text( " Portion", style: TextStyle(  fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: "SFProDisplay",
+                      color: Color.fromARGB(255, 255, 252, 249),
+                      shadows:[
+                        Shadow(
+                          blurRadius: 4,
+                          color: Color.fromARGB(255, 255, 252, 249),
+                 ),
+               ],
+              ),
+             ),
+             const SizedBox(height: 10),
              PortionCounter(),
+             const SizedBox(height: 20),
                     GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const PreparationScreen(),
+                      builder: (context) => const PreparationScreen(
+                      ),
                     ),
                   );
                 },

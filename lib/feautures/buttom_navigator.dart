@@ -15,7 +15,7 @@ class _ButtonNavigator extends State<ButtonNavigator> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-     const FeedScreen(),
+    const FeedScreen(),
     const FavoritScreen(),
     const SpotScreen(),
     const ProfilScreen(),

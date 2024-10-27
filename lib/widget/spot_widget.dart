@@ -17,9 +17,9 @@ String picture;
         borderRadius: BorderRadius.circular(12),
         child: Image.asset(
           picture,
-          height: 110,
+          height: 130,
           fit: BoxFit.cover,
-          width: 160,
+          width: 180,
         ),
       ),
       Container(
@@ -33,9 +33,11 @@ String picture;
         child: Text(
           text,
           style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+          color: Colors.white,
+          fontSize: 22,
+          fontWeight: FontWeight.w600,
+          fontStyle: FontStyle.italic,
+          fontFamily: "SFProDisplay",               
           ),
         ),
         ),
