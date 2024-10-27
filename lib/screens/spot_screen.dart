@@ -33,7 +33,7 @@ class SpotScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               const Align(
                 alignment: Alignment.topLeft,
                 child: Padding(
@@ -43,23 +43,33 @@ class SpotScreen extends StatelessWidget {
                     children: [
                       Text(
                         "Top Kategorien",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                       style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: "SFProDisplay",
                         ),
                       ),
-                      SizedBox(width: 10), 
-                      Icon(Icons.tune, size: 26, color: Colors.white),
+                      SizedBox(width: 150), 
+                      Icon(Icons.tune, size: 26, color: Colors.white),                       
                     ],
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+                     const SizedBox(height: 10),
+                      const Divider(
+                      thickness: 0.6,
+                      height: 20,
+                      indent: 20,
+                       endIndent: 20,
+                      color: Color.fromARGB(255, 255, 252, 247),),
+                      const SizedBox(height: 10),
+              
               const CategoryWidget(),
-              const SizedBox(height: 20),
-               const Divider(
-              thickness: 1,
+              const SizedBox(height: 10),
+              const Divider(
+              thickness: 0.6,
               height: 20,
               indent: 20,
               endIndent: 20,
@@ -70,7 +80,10 @@ class SpotScreen extends StatelessWidget {
                  style: TextStyle(
                    color: Colors.white,
                    fontSize: 24,
-                   fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: "SFProDisplay",
+
                  ),
                ),
               const SizedBox(height: 30),
