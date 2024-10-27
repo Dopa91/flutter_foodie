@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
+import "package:foodie_screen/feautures/fav_button.dart";
 import "package:foodie_screen/feautures/search_button.dart";
-
+import "package:foodie_screen/widget/fav_container%20widget.dart";
 
 class FavoritScreen extends StatelessWidget {
   const FavoritScreen({super.key});
@@ -20,12 +21,97 @@ class FavoritScreen extends StatelessWidget {
             end: Alignment.bottomRight,
           ),
         ),
-        child: const Padding(
-          padding: EdgeInsets.only(top: 80),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 80),
           child: Column(
             children: [
-              SearchButton(text: "Was möchtest du heute kochen?"),
-              SizedBox(height: 10),
+              const SearchButton(text: "Was möchtest du heute kochen?"),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                   Padding(
+                     padding: const EdgeInsets.only(right: 0),
+                     child: FavButton(
+                      text: "Neue Kollektion",
+                      onPressed: () {},
+                                       ),
+                   ),
+                  SizedBox(width: 0),
+                  IconButton(
+                    icon: const Icon(Icons.add, size: 40, color: Colors.black45,),
+                    color: Colors.white,
+                    onPressed: () {
+                    },
+                  ),
+                ],
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Container(
+                  margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 14),
+                  height: 500,
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 14),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: FavContainer(
+                              onTap: () {
+                                print("Container 1 wurde getippt!");
+                              },
+                              picture1: "assets/images/pizza.png",
+                              picture2: "assets/images/baklava.png",
+                              picture3: "assets/images/falafelhumus.png",
+                              picture4: "assets/images/chickebackground.png",
+                              text: "Alle Beiträge",
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: FavContainer(
+                              onTap: () {
+                                print("Container 2 wurde getippt!");
+                              },
+                              picture1: "assets/images/asiaaa.png",
+                              picture2: "assets/images/fishanchips.png",
+                              picture3: "assets/images/fühlingsrolle.png",
+                              picture4: "assets/images/asiaaa.png",
+                              text: "Asia Food",
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 14),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: FavContainer(
+                              onTap: () {
+                                print("Container 3 wurde getippt!");
+                              },
+                              picture1: "assets/images/taco.png",
+                              picture2: "assets/images/steak.png",
+                              picture3: "assets/images/pancakes.png",
+                              picture4: "assets/images/fleisch.png",
+                              text: "Besuch",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
