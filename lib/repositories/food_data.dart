@@ -60,7 +60,7 @@ List<FoodItem> foodRecipe = [
   FoodItem(
     imagePath: "assets/images/sushi.png",
     imageTitle: "Sushi",
-    imageSubTime: "Cat's are delicious",
+    imageSubTime: "30 Min",
     imagePrice: "2 Pers./ 16,98 €",
     // imageFav: " ",
     // iconClock:" ",
@@ -76,7 +76,7 @@ List<FoodItem> foodRecipe = [
   FoodItem(
     imagePath: "assets/images/fishanchips.png",
     imageTitle: "Fisch und Chips",
-    imageSubTime: "Sweet Chicken",
+    imageSubTime: "30 Min",
     imagePrice: "2 Pers./ 16,98 €",
     // imageFav: " ",
     // iconClock:" ",
@@ -92,7 +92,7 @@ List<FoodItem> foodRecipe = [
   FoodItem(
     imagePath: "assets/images/image copy.png",
     imageTitle: "Soufflé",
-    imageSubTime: "Vanilla on Waffle",
+    imageSubTime: "30 Min",
     imagePrice: "2 Pers./ 12.00 €",
     // imageFav: " ",
     // iconClock:" ",
@@ -100,7 +100,7 @@ List<FoodItem> foodRecipe = [
   FoodItem(
     imagePath: "assets/images/gratin.png",
     imageTitle: "Kartoffelgratin",
-    imageSubTime: "Delicious vegan Burger",
+    imageSubTime: "30 Minr",
     imagePrice: "2 Pers./ 19,00 €",
     // imageFav: " ",
     // iconClock:" ",
