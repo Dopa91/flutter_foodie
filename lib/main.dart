@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/themes.dart';
-import 'package:foodie_screen/screens/main_screen.dart';
+import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 //import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/models/food_item_class.dart';
+import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 
 class FoodContainerWidget extends StatelessWidget {
   final Function()? onTap;

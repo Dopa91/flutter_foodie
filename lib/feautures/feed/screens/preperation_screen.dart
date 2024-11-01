@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/widget/preparation_container_widget.dart';
+import 'package:foodie_screen/feautures/feed/widgets/preparation_container_widget.dart';
 
 class PreparationScreen extends StatelessWidget {
   const PreparationScreen({super.key});

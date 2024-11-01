@@ -1,4 +1,4 @@
-import 'package:foodie_screen/models/food_item_class.dart';
+import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 
 List<FoodItem> foodRecipe = [
   FoodItem(
@@ -84,7 +84,7 @@ List<FoodItem> foodRecipe = [
   FoodItem(
     imagePath: "assets/images/image.png",
     imageTitle: "Lasagne",
-    imageSubTime: "Stick with Choclate",
+    imageSubTime: "30 Min",
     imagePrice: "2 Pers./ 13,98 €",
     // imageFav: " ",
     // iconClock:" ",

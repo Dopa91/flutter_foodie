@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/screens/favorit_screen.dart';
-import 'package:foodie_screen/screens/feed_screen.dart';
-import 'package:foodie_screen/screens/profil_screen.dart';
-import 'package:foodie_screen/screens/spot_screen.dart';
+import 'package:foodie_screen/feautures/favorite/screens/favorit_screen.dart';
+import 'package:foodie_screen/feautures/feed/screens/feed_screen.dart';
+import 'package:foodie_screen/feautures/profile/screens/profil_screen.dart';
+import 'package:foodie_screen/feautures/discover/screens/spot_screen.dart';
 import 'package:foodie_screen/config/colors.dart'; 
 
 class ButtonNavigator extends StatefulWidget {

@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/feautures/fav_button.dart';
-import 'package:foodie_screen/feautures/search_button.dart';
+import 'package:foodie_screen/shared/widgets/fav_button.dart';
+import 'package:foodie_screen/shared/widgets/search_button.dart';
 
 class NewCollectionScreen extends StatelessWidget {
   const NewCollectionScreen({super.key});

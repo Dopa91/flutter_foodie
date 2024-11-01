@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/models/portion_counter.dart';
-import 'package:foodie_screen/screens/preperation_screen.dart';
-import 'package:foodie_screen/widget/recipe_container_widget.dart';
+import 'package:foodie_screen/feautures/feed/models/portion_counter.dart';
+import 'package:foodie_screen/feautures/feed/screens/preperation_screen.dart';
+import 'package:foodie_screen/feautures/feed/widgets/recipe_container_widget.dart';
 
 class RecipeScreen extends StatelessWidget {
   final String foodItem;

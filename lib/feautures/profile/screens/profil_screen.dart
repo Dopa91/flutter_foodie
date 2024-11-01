@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
-import "package:foodie_screen/feautures/profile_button.dart";
-import "package:foodie_screen/screens/favorit_screen.dart";
+import "package:foodie_screen/feautures/profile/widgets/profile_button.dart";
+import "package:foodie_screen/feautures/favorite/screens/favorit_screen.dart";
 
 class ProfilScreen extends StatelessWidget {
   const ProfilScreen({super.key});

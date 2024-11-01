@@ -1,14 +1,14 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
-import "package:foodie_screen/feautures/mail_button.dart";
-import "package:foodie_screen/feautures/login_button.dart";
-import "package:foodie_screen/feautures/password_button.dart";
-import "package:foodie_screen/screens/sign_up_screen.dart";
-import "package:foodie_screen/widget/richtlinien_widget.dart";
+import "package:foodie_screen/shared/widgets/foodie_button.dart";
+import "package:foodie_screen/shared/widgets/buttom_navigator.dart";
+import "package:foodie_screen/feautures/authentification/widgets/mail_button.dart";
+import "package:foodie_screen/feautures/authentification/widgets/password_button.dart";
+import "package:foodie_screen/feautures/authentification/widgets/richtlinien_widget.dart";
 
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +35,22 @@ class MainScreen extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Foodie",
-                    style: Theme.of(context).textTheme.titleLarge                 //Theme                           //Theme
-                  ),
+                    style: Theme.of(context).textTheme.titleLarge,
+                  
+                  ),                        
+                  //style: Theme.of(context).textTheme.titleLarge   
                 ),
               ),
-              Image.asset(
-                "assets/images/iconfoodie1.png",
-                height: 200,
-                width: 600,
+               const Text(
+              "Erstelle dein kostenloses\n            Rezeptbuch",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                 fontFamily: "SFProDisplay",
+                 fontStyle: FontStyle.italic,
+                color: Color.fromARGB(255, 80, 57, 50),
               ),
+            ),
               const SizedBox(height: 20),
               const Divider(
                 thickness: 0.9,
@@ -53,44 +60,31 @@ class MainScreen extends StatelessWidget {
                 color: Color.fromARGB(255, 103, 71, 31),
               ),
               const MailButton(text:"E-Mail"),
-              const SizedBox(height: 0),
+              const MailButton(text: "Username"),
               const PasswordButton(text: "Password"),
-              const SizedBox(height: 5),
-              const SizedBox(height: 4),
-              const Divider(
+              const PasswordButton(text: "Repeat Password"),
+              const SizedBox(height: 20),
+               const Divider(
                 thickness: 0.9,
                 height: 20,
                 indent: 20, // abstand links
                 endIndent: 20, // abstand rechts
                 color: Color.fromARGB(255, 103, 71, 31),
-              ),
-             const SizedBox(height: 10),
+               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: LoginButton(
-                text: "Sign in!",
-                onPressed: () {
+                child: FoodieButton(
+                text: "Sign Up!",
+                onPressed: () {Navigator.push(
+                      context, MaterialPageRoute(
+                        builder: (context) => const ButtonNavigator( 
+                      )
+                      )
+                );
                 },
                ),
               ),
-              const SizedBox(height: 5),
-              GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SignUpScreen()));
-              },
-              child: const Text(
-                "No account? Sign up.",
-                style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 12,
-                    fontWeight: FontWeight.normal),
-                textAlign: TextAlign.right,
-              ),
-            ),
-            const SizedBox(height: 20),
+               const SizedBox(height: 30),
               Row(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [
@@ -98,8 +92,8 @@ class MainScreen extends StatelessWidget {
       width: 60,
       height: 60,
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black),
-        borderRadius: BorderRadius.circular(12),
+      //  border: Border.all(color: Colors.black),
+        borderRadius: BorderRadius.circular(15),
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -142,16 +136,16 @@ class MainScreen extends StatelessWidget {
         child: Image.asset(
           "assets/icon/Apple_logo_white.svg.png",
           height: 30,
-                        ),
-                      ),
-                    ),
-                  ],
-                 ),
-                 const SizedBox(height: 25),
-                const RichtlinienWidget(),
-                ],
-               ),
-              )
-           );
-          }
-         }
+                  ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 25),
+            const RichtlinienWidget(),
+          ],
+        ),
+      ),
+    );
+  }
+}
