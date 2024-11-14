@@ -13,7 +13,8 @@ class FoodItem {
     required this.imagePath,
     required this.imageTitle,
     required this.imageSubTime,
-    required this.imagePrice,
+    required this.imagePrice, 
+    // required String description,
     // required this.imageFav,
     // required this.iconClock,
 
