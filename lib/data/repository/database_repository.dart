@@ -1,5 +1,4 @@
 
-import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 
@@ -34,8 +33,8 @@ abstract class DatabaseRepository {
   // Kategorien abrufen
   Future<List<String>>  getCategories();
 
-  // Kategorie abrufen
-   Future<List<CategoryWidget>> getCategory(String category);
+  // // Kategorie abrufen
+  //  Future<List<CategoryWidget>> getCategory(String category);
 
   // Rezeptanleitung abrufen
   Future<String> getRecipeInstructions(String recipe);

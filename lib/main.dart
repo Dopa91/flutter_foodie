@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/themes.dart';
+import 'package:foodie_screen/data/repository/database_repository.dart';
+import 'package:foodie_screen/data/repository/mock_database.dart';
 import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  final DatabaseRepository   repository = MockDatabase();
+  runApp(MyApp( repository: repository));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required DatabaseRepository repository});
 
   @override
   Widget build(BuildContext context) {

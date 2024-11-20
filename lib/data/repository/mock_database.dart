@@ -1,5 +1,5 @@
 
-import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
+// import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 
@@ -25,22 +25,19 @@ class MockDatabase implements DatabaseRepository {
   ),
   ];
 
-
   final List<String> categories = ["Low Carb", "Veggie", "schnell", "Season"];
 
- 
   @override
   Future<void> addUser(String user) async {
-    await Future.delayed(const Duration(milliseconds: 1)); (user) {
-       Exception("Benutzer existiert bereits");
-    };
+    await Future.delayed(const Duration(milliseconds: 1));
+    // überprüfen ob user in der Liste bereits existiert
     users.add(user);
   }
 
 
   @override
   Future<void> editUser(String user) async {
-    Future.delayed(const Duration(milliseconds: 1));
+    Future.delayed(const Duration(seconds: 1));
     int index = users.indexOf(user);
     if (index == -1) {
       Exception("Benutzer nicht gefunden");
@@ -67,14 +64,14 @@ class MockDatabase implements DatabaseRepository {
   // Alle Rezepte abrufen
   @override
   Future<List<FoodItem>> getAllRecipes() async {
-    await Future.delayed(const Duration(milliseconds: 3)); 
+    await Future.delayed(const Duration(seconds: 3)); 
     return recipes;
   }
 
   // Rezept löschen
 @override
   Future<void> removeRecipe(String recipe) async {
-    await Future.delayed(const Duration(milliseconds: 3)); 
+    await Future.delayed(const Duration(seconds: 3)); 
     recipes.remove(recipe);
   }
 
@@ -87,27 +84,24 @@ class MockDatabase implements DatabaseRepository {
     ];
   }
 
-  // Kategorien abrufen
+  // Kategorien abrufen und zurückgeben
   @override
   Future<List<String>> getCategories() async {
-    await Future.delayed(const Duration(milliseconds: 3)); 
-    return categories;
+    await Future.delayed(const Duration(seconds: 3)); 
+    return [];
   }
 
-  // Kategorie abrufen
-  @override
-  Future<List<CategoryWidget>> getCategory(String category) async {
-    await Future.delayed(const Duration(milliseconds: 3)); 
-    return[
-      const CategoryWidget(),
-  
-    ];
-  }
+  // // Kategorie abrufen und zuruckgeben
+  // @override
+  // Future<List<String>> getCategory(String category) async {
+  //   await Future.delayed(const Duration(seconds: 3)); 
+  //  return [];
+  // }
 
   
    @override
   Future<String> getRecipeInstructions(String recipeName) async {
-    await Future.delayed(const Duration(milliseconds: 3)); 
+    await Future.delayed(const Duration(seconds: 1)); 
     return "Step 1 / Zwiebel & Gewürze anbraten:\n"
            "• Butter in einer Pfanne erhitzen.\n"
            "• Zwiebel, Knoblauch und Ingwer hinzufügen.\n"
@@ -115,10 +109,11 @@ class MockDatabase implements DatabaseRepository {
   }
   
   @override
-  Future<void> changeRecipePortion(String recipe, int newPortionSize) {
-    // TODO: implement changeRecipePortion
-    throw UnimplementedError();
+  Future<void> changeRecipePortion(String recipe, int newPortionSize) async{
+    await Future.delayed(const Duration(seconds: 1)); 
   }
+  
+
   
 
 

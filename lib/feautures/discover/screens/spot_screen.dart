@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/shared/widgets/search_button.dart';
+import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
+import 'package:foodie_screen/shared/widgets/search_button.dart';
 
 class SpotScreen extends StatelessWidget {
   const SpotScreen({super.key});
