@@ -5,12 +5,14 @@ import 'package:foodie_screen/data/repository/mock_database.dart';
 import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
 
 void main() async {
-  final DatabaseRepository   repository = MockDatabase();
+  final repository = MockDatabase();
   runApp(MyApp( repository: repository));
+  
 }
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key, required DatabaseRepository repository});
+ MyApp({super.key, required DatabaseRepository repository});
+
+final DatabaseRepository repository= MockDatabase();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Foodie",
       theme: myTheme,
-      home: const MainScreen(),
+      home:  MainScreen(repository: repository),
     );
   }
 }

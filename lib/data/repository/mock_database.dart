@@ -1,6 +1,7 @@
 
 // import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
+import 'package:foodie_screen/feautures/feed/models/food_data.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 
 import 'database_repository.dart';
@@ -9,21 +10,11 @@ class MockDatabase implements DatabaseRepository {
 
    List<String> users = ["beyz", "6161"];
 
-   // Rezepte übersicht
-  final List<FoodItem> recipes = [
-    FoodItem(
-      imagePath: "assets/images/butterchicken.png",
-      imageTitle: "Butter Chicken", 
-      imageSubTime: " 30 Min.",
-      imagePrice:  " 2 Pers./ 16,98 € " ,
-  ),
-  FoodItem(
-    imagePath: "assets/images/pancakes.png",
-    imageTitle: "Pancakes mit Apfelsirup",
-    imageSubTime: "30 Min.",
-    imagePrice: "   2 Pers./ 15,98 € ",
-  ),
-  ];
+
+// Future<List<FoodItem>> futureRecipe()async{
+//      await Future.delayed(const Duration(seconds: 3)); // Simulieren Datenabfrage
+//      return foodRecipe;
+//   }
 
   final List<String> categories = ["Low Carb", "Veggie", "schnell", "Season"];
 
@@ -48,7 +39,7 @@ class MockDatabase implements DatabaseRepository {
   // Logindaten überprüfen
   @override
   Future<bool> checkUserCredentials(String userName, String password, String email) async {
-    await Future.delayed(const Duration(milliseconds: 3)); 
+    await Future.delayed(const Duration(seconds: 3)); 
     return users.contains(userName);
   }
 
@@ -65,14 +56,14 @@ class MockDatabase implements DatabaseRepository {
   @override
   Future<List<FoodItem>> getAllRecipes() async {
     await Future.delayed(const Duration(seconds: 3)); 
-    return recipes;
+    return foodRecipe;
   }
 
   // Rezept löschen
 @override
   Future<void> removeRecipe(String recipe) async {
     await Future.delayed(const Duration(seconds: 3)); 
-    recipes.remove(recipe);
+    foodRecipe.remove(foodRecipe);
   }
 
   // Beliebte Rezepte abrufen

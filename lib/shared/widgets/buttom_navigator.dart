@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/data/repository/database_repository.dart';
+import 'package:foodie_screen/feautures/discover/screens/spot_screen.dart';
 import 'package:foodie_screen/feautures/favorite/screens/favorit_screen.dart';
 import 'package:foodie_screen/feautures/feed/screens/feed_screen.dart';
-import 'package:foodie_screen/feautures/profile/screens/profil_screen.dart';
-import 'package:foodie_screen/feautures/discover/screens/spot_screen.dart';
-import 'package:foodie_screen/config/colors.dart'; 
+import 'package:foodie_screen/feautures/profile/screens/profil_screen.dart'; 
 
 class ButtonNavigator extends StatefulWidget {
-  const ButtonNavigator({super.key});
+const ButtonNavigator({super.key,required this.repository});
+final DatabaseRepository repository;
 
   @override
   _ButtonNavigator createState() => _ButtonNavigator();
@@ -14,12 +16,18 @@ class ButtonNavigator extends StatefulWidget {
 class _ButtonNavigator extends State<ButtonNavigator> {
   int _selectedIndex = 0;
 
-  final List<Widget> _screens = [
-    const FeedScreen(),
-    const FavoritScreen(),
-    const SpotScreen(),
-    const ProfilScreen(),
-  ];
+  late final List<Widget> _screens;
+
+  @override
+  void initState() {
+    super.initState();
+    _screens = [
+      FeedScreen(repository: widget.repository),
+      const FavoritScreen(),
+      const SpotScreen(),
+      const ProfilScreen(),
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {

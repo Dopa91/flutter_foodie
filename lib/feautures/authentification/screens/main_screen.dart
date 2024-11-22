@@ -1,14 +1,16 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
-import "package:foodie_screen/feautures/authentification/widgets/mail_button.dart";
-import "package:foodie_screen/shared/widgets/foodie_button.dart";
-import "package:foodie_screen/feautures/authentification/widgets/password_button.dart";
+import "package:foodie_screen/data/repository/database_repository.dart";
 import "package:foodie_screen/feautures/authentification/screens/sign_up_screen.dart";
+import "package:foodie_screen/feautures/authentification/widgets/mail_button.dart";
+import "package:foodie_screen/feautures/authentification/widgets/password_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/richtlinien_widget.dart";
+import "package:foodie_screen/shared/widgets/foodie_button.dart";
 
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  const MainScreen({super.key,required this.repository});
+  final DatabaseRepository repository;  
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +81,7 @@ class MainScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const SignUpScreen()));
+                        builder: (context) => SignUpScreen(repository: repository)));
               },
               child: const Text(
                 "No account? Sign up.",
