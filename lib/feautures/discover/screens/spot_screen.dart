@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
 
 class SpotScreen extends StatelessWidget {
-  const SpotScreen({super.key});
+  const SpotScreen({super.key,  required this.repository});
+  
+final DatabaseRepository repository;  
 
   @override
   Widget build(BuildContext context) {
@@ -90,32 +93,49 @@ class SpotScreen extends StatelessWidget {
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SpotWidget(text: "Pizza Caprese", picture: "assets/images/pizza.png"),
-                        const SizedBox(width: 10),
-                        SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),
-                      ],
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SpotWidget(text: "Dumplings", picture: "assets/images/dumplings.png"),
-                        const SizedBox(width: 10),
-                        SpotWidget(text: "Baklava", picture: "assets/images/baklava.png"),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                   FutureBuilder(
+            future: repository.getPopularRecipes(), // Beliebte Rezepte laden
+            builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) { // Ladeanzeige 
+            return const Center(
+            child: CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+           ),
+          );
+         } else { // rezepte gefunden
+      final popularRecipes = snapshot.data as List<SpotWidget>; // Beliebte Rezepte
+      return Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              popularRecipes[0],
+              const SizedBox(width: 10),
+              popularRecipes[1],
+               ],
+               ),
+                 const SizedBox(height: 20),
+                 Row(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  popularRecipes[2],
+                  const SizedBox(width: 10),
+                  popularRecipes[3],
+                 ],
+                 ),
+                ],
+                );
+               }
+              },
+            ),
+           ],
           ),
-        ),
+         ),
+       ],
+       ),
       ),
-    );
-  }
+     ),
+   );
+ }
 }
