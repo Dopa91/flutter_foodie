@@ -25,7 +25,7 @@ abstract class DatabaseRepository {
   Future<void> removeRecipe(String recipe);
 
   // Portionsmenge eines Rezepts ändern
-  Future<void> changeRecipePortion(String recipe, int newPortionSize);
+  Future<void> PortionCounter(String recipe, int newPortionSize);
 
   // Beliebte Rezepte abrufen
    Future<List<SpotWidget>> getPopularRecipes();
@@ -37,5 +37,5 @@ abstract class DatabaseRepository {
   //  Future<List<CategoryWidget>> getCategory(String category);
 
   // Rezeptanleitung abrufen
-  Future<String> getRecipeInstructions(String recipe);
+  Future<String> PreparationContainer(String title, String description);
 }

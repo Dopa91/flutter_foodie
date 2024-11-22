@@ -8,15 +8,15 @@ import 'database_repository.dart';
 
 class MockDatabase implements DatabaseRepository {
 
-   List<String> users = ["beyz", "6161"];
-
-
-// Future<List<FoodItem>> futureRecipe()async{
-//      await Future.delayed(const Duration(seconds: 3)); // Simulieren Datenabfrage
-//      return foodRecipe;
-//   }
-
   final List<String> categories = ["Low Carb", "Veggie", "schnell", "Season"];
+
+  final List<SpotWidget> popularRecipes = [
+  SpotWidget(text: "Dumplings",picture: "assets/images/dumplings.png"),
+  SpotWidget(text: "Baklava", picture: "assets/images/baklava.png"),
+  SpotWidget(text: "Pizza Caprese", picture: "assets/images/pizza.png"),
+  SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),];
+
+   List<String> users = ["beyz", "6161"];
 
   @override
   Future<void> addUser(String user) async {
@@ -24,7 +24,6 @@ class MockDatabase implements DatabaseRepository {
     // überprüfen ob user in der Liste bereits existiert
     users.add(user);
   }
-
 
   @override
   Future<void> editUser(String user) async {
@@ -69,17 +68,15 @@ class MockDatabase implements DatabaseRepository {
   // Beliebte Rezepte abrufen
   @override
   Future<List<SpotWidget>> getPopularRecipes() async {
-    return [
-      SpotWidget(text: "Pizza Caprese", picture: "assets/images/pizza.png"),
-      SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),
-    ];
+     await Future.delayed(const Duration(seconds: 1)); 
+    return popularRecipes;
   }
 
   // Kategorien abrufen und zurückgeben
   @override
   Future<List<String>> getCategories() async {
     await Future.delayed(const Duration(seconds: 3)); 
-    return [];
+    return categories;
   }
 
   // // Kategorie abrufen und zuruckgeben
@@ -91,16 +88,13 @@ class MockDatabase implements DatabaseRepository {
 
   
    @override
-  Future<String> getRecipeInstructions(String recipeName) async {
+  Future<String> PreparationContainer(String title, String description) async {
     await Future.delayed(const Duration(seconds: 1)); 
-    return "Step 1 / Zwiebel & Gewürze anbraten:\n"
-           "• Butter in einer Pfanne erhitzen.\n"
-           "• Zwiebel, Knoblauch und Ingwer hinzufügen.\n"
-           "• Paprikapulver und Chili dazugeben.";
+    return "Zubereitung";
   }
   
   @override
-  Future<void> changeRecipePortion(String recipe, int newPortionSize) async{
+  Future<void> PortionCounter(String recipe, int newPortionSize) async{
     await Future.delayed(const Duration(seconds: 1)); 
   }
   
