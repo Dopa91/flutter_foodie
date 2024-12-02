@@ -15,8 +15,8 @@ abstract class DatabaseRepository {
    // Benutzer löschen
   Future<void> removeUser(String recipe);
 
-  //  Rezept zu Fav hinzufügen
-  //  Future<void> Favc(Recipe newRecipe);
+   Rezept zu Fav hinzufügen
+   Future<void> Favc(Recipe newRecipe);
 
   // Alle Rezepte abrufen
    Future<List<FoodItem>> getAllRecipes();

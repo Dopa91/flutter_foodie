@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		eO3qs0SZKVgs8wRazpQGtzJn7Xw=
+		tZ3ukbD1Wc+bbMfd0y42f/XyImY=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		4lN2Ior915CGcuh98eSgNq4kPnc=
+		JpAfP9A1W1OBVVKv5S5F9B7rwgE=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		7K8QdLeoDaLOqL5DnucqMrDcg+Y=
+		ScbP6I6Map8m07qrihqZb8C4xJk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		SZz2phPRlf+VbqxPnexKThnP4c0=
+		J1DDfHOb7lKYE+KFjxkbBVuT/ZE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/social_login_buttons/lib/assets/2.0x/apple-black-logo.png</key>
 		<data>
@@ -438,7 +438,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cG3Nb2/3XbnfviHDCPJtZehV7Js=
+		EfSf7I5+feFd1sJcSmYhrMA8wbQ=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -446,7 +446,7 @@
 		</data>
 		<key>Runner.debug.dylib</key>
 		<data>
-		b22Unl3Rgpr/HHug2HSiNRNm1AM=
+		uoV7Y7NKvq2sC1ByJmo7ewSj6tE=
 		</data>
 		<key>__preview.dylib</key>
 		<data>
@@ -480,7 +480,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xh/mQsCleuy+xsVOAkuQJ2zMHxvVqztvYZ0oxlrqgSM=
+			AkXVRNpSBTzt+mzqWe/KqIBkvPBtGGO0SiYGrRFlcBc=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -529,7 +529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rG11oKixsFSwGmqQsrx3vK1JFG1lm+6TvzJFwTdIW+s=
+			99pL/Mix9c1WZ18JvgDPzRcqi9NzJFJmDzAmzmpcv2Y=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -543,7 +543,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4vRdIglag6NwS3pvBo2hKneO3h4rgav1ORkgQWSubS0=
+			r2w4xS5iGIEYqu73VoRHCbflxvXQwfojAiXlw9HVGyQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -893,7 +893,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rV+3pv6FFUD5piyyKKZnV1IENiHEPViSBQRcHv3FM9k=
+			Wa7vF/ZyoxhtGxZoyuyilw+CAVK6YpZbUVq5WYu9Bp0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/social_login_buttons/lib/assets/2.0x/apple-black-logo.png</key>
@@ -1215,7 +1215,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AyhTVwRtifQl4eYP1YgH2tQ+zURvZ3tXMnKltuIzXnE=
+			qGDOXFkQpkwdzmlBT8WxROL/GLwXqy4+3gjMj3TLGmQ=
 			</data>
 		</dict>
 		<key>__preview.dylib</key>
