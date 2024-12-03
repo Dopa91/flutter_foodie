@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
 import 'package:foodie_screen/data/repository/database_repository.dart';
-import 'package:foodie_screen/feautures/favorite/widgets/food_container_widget.dart';
 import 'package:foodie_screen/feautures/feed/models/food_data.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 import 'package:foodie_screen/feautures/feed/screens/recipe_screen.dart';
+import 'package:foodie_screen/feautures/profile/widgets/food_container_widget.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
 
 class FeedScreen extends StatefulWidget {

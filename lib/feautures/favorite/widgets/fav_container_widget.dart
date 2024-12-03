@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FavContainer extends StatelessWidget {
-  final Function()? onTap;
+  final Function()? onTap; 
   final String text;
   final String picture1; 
   final String picture2; 
@@ -16,25 +16,25 @@ class FavContainer extends StatelessWidget {
     required this.picture2,
     required this.picture3,
     required this.picture4,
-  });
+  });  
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(8),
         child: Center(
           child: Container(
-            height: 190,
-            width: 150,
+            height: 195,
+            width: 180,
             decoration: BoxDecoration(
               color: const Color.fromARGB(200, 233, 189, 149).withOpacity(0.8),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
               children: [
-                const SizedBox(height: 20), 
+                const SizedBox(height: 16), 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

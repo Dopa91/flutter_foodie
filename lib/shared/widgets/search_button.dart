@@ -38,7 +38,7 @@ class SearchButton extends StatelessWidget {
             hintText: text,
             hintStyle: const TextStyle(
               fontSize: 14,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
               fontFamily: "SFProDisplay",
               fontStyle: FontStyle.italic,
             ),

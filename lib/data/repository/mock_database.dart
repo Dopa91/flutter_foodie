@@ -9,7 +9,7 @@ import 'database_repository.dart';
 class MockDatabase implements DatabaseRepository {
 
   final List<String> categories = ["Low Carb", "Veggie", "schnell", "Season"];
-
+  final List<Map<String, List<String>>> favoriteCollections = [];
   final List<SpotWidget> popularRecipes = [
   SpotWidget(text: "Dumplings",picture: "assets/images/dumplings.png"),
   SpotWidget(text: "Baklava", picture: "assets/images/baklava.png"),
@@ -17,6 +17,10 @@ class MockDatabase implements DatabaseRepository {
   SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),];
 
    List<String> users = ["beyz", "6161"];
+
+
+
+
 
   @override
   Future<void> addUser(String user) async {
@@ -48,14 +52,21 @@ class MockDatabase implements DatabaseRepository {
     users.remove(user);
   }
 
-  // Rezept zu Favoriten hinzufügen
-  // Future<void> addRecipeToFavorites(String userId, FoodItem recipe) async {}
+
 
   // Alle Rezepte abrufen
   @override
   Future<List<FoodItem>> getAllRecipes() async {
     await Future.delayed(const Duration(seconds: 3)); 
     return foodRecipe;
+  }
+
+
+  @override
+  Future<void> addFavCollection(String collectionName, List<String> recipes) async {
+    await Future.delayed(const Duration(seconds: 2));
+    favoriteCollections.add({collectionName: recipes});
+
   }
 
   // Rezept löschen
@@ -98,8 +109,15 @@ class MockDatabase implements DatabaseRepository {
     await Future.delayed(const Duration(seconds: 1)); 
   }
   
-
+  @override
+  Future<void> FavoritScreen(getFavoriteRecipe) async {
+    await Future.delayed(const Duration(seconds: 1)); 
+  }
   
-
-
+  @override
+  Future<void> addToFavorites(String recipe) {
+    // TODO: implement addToFavorites
+    throw UnimplementedError();
+  }
+  
 }

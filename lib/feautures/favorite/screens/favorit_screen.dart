@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
-import "package:foodie_screen/feautures/favorite/screens/new_collection_screen.dart";
-import "package:foodie_screen/feautures/favorite/widgets/fav_container%20widget.dart";
+import "package:foodie_screen/feautures/favorite/models/new_collection_dialog.dart";
+import "package:foodie_screen/feautures/favorite/widgets/fav_container_widget.dart";
+import "package:foodie_screen/feautures/favorite/widgets/fav_containers.dart";
 import "package:foodie_screen/shared/widgets/fav_button.dart";
 import "package:foodie_screen/shared/widgets/search_button.dart";
 
@@ -31,90 +32,57 @@ class FavoritScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                   Padding(
-                     padding: const EdgeInsets.only(right: 0),
-                     child: FavButton(
+                  Padding(
+                    padding: const EdgeInsets.only(right: 0),
+                    child: FavButton(
                       text: "Neue Kollektion",
-                      onPressed: () {},
-                                       ),
-                   ),
-                  const SizedBox(width: 0),
-                  IconButton(
-                    icon: const Icon(Icons.add, size: 40, color: Colors.black45,),
-                    color: Colors.white,
-                     onPressed: () {
-
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const NewCollectionScreen()),
-                      );
-                    },
+                      onPressed: () { showNewCollection(context); 
+                      },
+                    ),
                   ),
                 ],
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
-                  margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 14),
+                  margin: const EdgeInsets.all(10),
                   height: 490,
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(16),
+                  width: 350, // nimmt die ganze Breite ein
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 14),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  child: GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.7,
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 8,
+                    ),
+                    itemCount: favContainers.length,
+                    itemBuilder: (context, index) {
+                      final favContainer = favContainers[index];
+                      return Column(
                         children: [
-                          Expanded(
-                            child: FavContainer(
-                              onTap: () {
-                                print(" ");
-                              },
-                              picture1: "assets/images/pizza.png",
-                              picture2: "assets/images/baklava.png",
-                              picture3: "assets/images/falafelhumus.png",
-                              picture4: "assets/images/chickebackground.png",
-                              text: "Alle Beiträge",
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-                          Expanded(
-                            child: FavContainer(
-                              onTap: () {
-                                print("Container 2 wurde getippt!");
-                              },
-                              picture1: "assets/images/asiaaa.png",
-                              picture2: "assets/images/fishanchips.png",
-                              picture3: "assets/images/fühlingsrolle.png",
-                              picture4: "assets/images/asiaaa.png",
-                              text: "Asia Food",
-                            ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: FavContainer(
+                                  onTap: favContainer.onTap,
+                                  picture1: favContainer.picture1,
+                                  picture2: favContainer.picture2,
+                                  picture3: favContainer.picture3,
+                                  picture4: favContainer.picture4,
+                                  text: favContainer.text,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
-                      ),
-                      const SizedBox(height: 14),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Expanded(
-                            child: FavContainer(
-                              onTap: () {
-                                print("Container 3 wurde getippt!");
-                              },
-                              picture1: "assets/images/taco.png",
-                              picture2: "assets/images/steak.png",
-                              picture3: "assets/images/pancakes.png",
-                              picture4: "assets/images/fleisch.png",
-                              text: "Besuch",
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                      );
+                    },
                   ),
                 ),
               ),

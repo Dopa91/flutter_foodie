@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
-import "package:foodie_screen/feautures/profile/widgets/profile_button.dart";
 import "package:foodie_screen/feautures/favorite/screens/favorit_screen.dart";
+import "package:foodie_screen/feautures/profile/widgets/profile_button.dart";
 
 class ProfilScreen extends StatelessWidget {
   const ProfilScreen({super.key});
@@ -110,7 +110,7 @@ class ProfilScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const FavoritScreen()),
+                  MaterialPageRoute(builder: (context) =>  const FavoritScreen()),
                 );
               },
             ),
@@ -127,7 +127,7 @@ class ProfilScreen extends StatelessWidget {
             const SizedBox(height: 10),
             const Divider(
               thickness: 1,
-              height: 20,
+              height: 10,
               indent: 20,
               endIndent: 20,
               color: Color.fromARGB(255, 103, 71, 31),

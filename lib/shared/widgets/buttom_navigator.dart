@@ -23,7 +23,7 @@ class _ButtonNavigator extends State<ButtonNavigator> {
     super.initState();
     _screens = [
       FeedScreen(repository: widget.repository),
-      const FavoritScreen(),
+       const FavoritScreen(),
       SpotScreen(repository: widget.repository),
       const ProfilScreen(),
     ];

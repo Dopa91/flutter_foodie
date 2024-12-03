@@ -37,42 +37,50 @@ class NewCollectionScreen extends StatelessWidget {
                       onPressed: () {},
                     ),
                   ),
-                  IconButton(
-                    icon: const Icon(Icons.add, size: 40, color: Colors.black45),
-                    onPressed: () {},
-                  ),
+                  // IconButton(
+                  //   icon: const Icon(Icons.add, size: 40, color: Colors.black45),
+                  //   onPressed: () {},
+                    
+                  // ),
                 ],
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: 300,
+                height: 55,
+                child: TextField(
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                            hintText: "Name der Kollektion",
+                            hintStyle: const TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 26,
+                            fontStyle: FontStyle.italic,
+                           fontFamily: "SFProDisplay",color: Color.fromARGB(255, 21, 19, 19)),
+                            filled: true,
+                            fillColor: const Color.fromARGB(255, 255, 253, 251).withOpacity(0.7),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide.none,
+                            ),
+                          ),
+                        ),
               ),
               const SizedBox(height: 20),
               ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
-                  height: 490,
-                  width: 350,
+
                   margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 14),
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.5),
+                    color: const Color.fromARGB(255, 217, 180, 180).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: "Name der Kollektion",
-                          hintStyle: const TextStyle(fontWeight: FontWeight.w500,
-                          fontSize: 26,
-                          fontStyle: FontStyle.italic,
-                         fontFamily: "SFProDisplay",color: Color.fromARGB(255, 255, 255, 255,)),
-                          filled: true,
-                          fillColor: const Color.fromARGB(255, 255, 210, 169).withOpacity(0.7),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
-                          ),
-                        ),
-                      ),
+                      
                       const SizedBox(height: 0),
                       IconButton(
                         icon: Transform.scale(

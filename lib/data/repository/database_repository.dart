@@ -14,15 +14,17 @@ abstract class DatabaseRepository {
 
    // Benutzer löschen
   Future<void> removeUser(String recipe);
-
-   Rezept zu Fav hinzufügen
-   Future<void> Favc(Recipe newRecipe);
+  
+//Favcollection hinzufügen
+ Future<void> addFavCollection(String collectionName, List<String> recipes);
 
   // Alle Rezepte abrufen
    Future<List<FoodItem>> getAllRecipes();
 
   // Rezept löschen
   Future<void> removeRecipe(String recipe);
+
+ Future<void> addToFavorites(String recipe);
 
   // Portionsmenge eines Rezepts ändern
   Future<void> PortionCounter(String recipe, int newPortionSize);
