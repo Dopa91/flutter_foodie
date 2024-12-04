@@ -1,14 +1,13 @@
-import "package:flutter/material.dart";
-import "package:foodie_screen/config/colors.dart";
-import "package:foodie_screen/feautures/favorite/models/new_collection_dialog.dart";
-import "package:foodie_screen/feautures/favorite/widgets/fav_container_widget.dart";
-import "package:foodie_screen/feautures/favorite/widgets/fav_containers.dart";
-import "package:foodie_screen/shared/widgets/fav_button.dart";
-import "package:foodie_screen/shared/widgets/search_button.dart";
+import 'package:flutter/material.dart';
+import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/feautures/favorite/models/new_collection_dialog.dart';
+import 'package:foodie_screen/feautures/favorite/widgets/fav_container_widget.dart';
+import 'package:foodie_screen/feautures/favorite/widgets/fav_containers.dart';
+import 'package:foodie_screen/shared/widgets/fav_button.dart';
+import 'package:foodie_screen/shared/widgets/search_button.dart';
 
 class FavoritScreen extends StatelessWidget {
   const FavoritScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,56 +35,55 @@ class FavoritScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 0),
                     child: FavButton(
                       text: "Neue Kollektion",
-                      onPressed: () { showNewCollection(context); 
+                      onPressed: () {
+                        showNewCollection(context);
                       },
                     ),
                   ),
                 ],
               ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(15),
+              const SizedBox(height: 8),
+              Expanded(
                 child: Container(
                   margin: const EdgeInsets.all(10),
-                  height: 490,
-                  width: 350, // nimmt die ganze Breite ein
+                  width: 370,
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.7,
-                      mainAxisSpacing: 8,
-                      crossAxisSpacing: 8,
-                    ),
-                    itemCount: favContainers.length,
-                    itemBuilder: (context, index) {
-                      final favContainer = favContainers[index];
-                      return Column(
-                        children: [
-                          Row(
-                            children: [
-                              Expanded(
-                                child: FavContainer(
-                                  onTap: favContainer.onTap,
-                                  picture1: favContainer.picture1,
-                                  picture2: favContainer.picture2,
-                                  picture3: favContainer.picture3,
-                                  picture4: favContainer.picture4,
-                                  text: favContainer.text,
-                                ),
-                              ),
-                            ],
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: GridView.builder(
+                          padding:
+                              EdgeInsets.zero, // Entfernt jegliches Padding
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2, // Anzahl der Spalten
+                            crossAxisSpacing:
+                                8.0, // Abstand zwischen den Spalten
+                            mainAxisSpacing: 8.0, // Abstand zwischen den Reihen
                           ),
-                        ],
-                      );
-                    },
+                          itemCount: favContainers.length,
+                          itemBuilder: (context, index) {
+                            final favContainer = favContainers[index];
+                            return FavContainer(
+                              onTap: favContainer.onTap,
+                              picture1: favContainer.picture1,
+                              picture2: favContainer.picture2,
+                              picture3: favContainer.picture3,
+                              picture4: favContainer.picture4,
+                              text: favContainer.text,
+                            );
+                          },
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
+              const SizedBox(height: 10),
             ],
           ),
         ),
