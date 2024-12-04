@@ -4,7 +4,7 @@ import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/screens/spot_screen.dart';
 import 'package:foodie_screen/feautures/favorite/screens/favorit_screen.dart';
 import 'package:foodie_screen/feautures/feed/screens/feed_screen.dart';
-import 'package:foodie_screen/feautures/profile/screens/profil_screen.dart'; 
+import 'package:foodie_screen/feautures/profile/screens/settings_screen.dart'; 
 
 class ButtonNavigator extends StatefulWidget {
 const ButtonNavigator({super.key,required this.repository});
@@ -25,7 +25,7 @@ class _ButtonNavigator extends State<ButtonNavigator> {
       FeedScreen(repository: widget.repository),
        const FavoritScreen(),
       SpotScreen(repository: widget.repository),
-      const ProfilScreen(),
+      const SettingsScreen(),
     ];
   }
 
