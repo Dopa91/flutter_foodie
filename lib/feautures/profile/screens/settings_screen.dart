@@ -64,7 +64,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.notifications, color: Colors.white),
+              leading: const Icon(Icons.notifications, color: Colors.white), 
               title: const Text(
                 "Benachrichtigungen",
                   style: TextStyle(
@@ -73,7 +73,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               fontStyle: FontStyle.italic,
               ),
                   ),
-              trailing: Switch(
+              trailing: Switch( // Switch ist ein zum an und aus machen
                 value: isClickOn,
                 onChanged: (value) {
                   setState(() {
@@ -180,17 +180,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
             indent: 52,
             endIndent: 30,
             ),
-            // const Expanded(child: SizedBox()),
-            // const SizedBox(height: 10,),
-            // ProfileButton(
-            //   text: "Abmelden",
-            //   onPressed: () {
-            //     Navigator.pop(context); 
              const SizedBox(height: 10,),
               FoodieButton(
               text: "Abmelden",
               onPressed: () {
-              Navigator.pop(context); 
+              Navigator.pop(context); // geht zurück zur registrierung 
               },
             ),
           ],
