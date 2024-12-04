@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
 import 'package:foodie_screen/feautures/profile/screens/change_email_screen.dart';
 import 'package:foodie_screen/feautures/profile/screens/change_password.dart';
+import 'package:foodie_screen/feautures/profile/screens/food_choices.dart';
 import 'package:foodie_screen/feautures/profile/screens/user_screen.dart';
 import 'package:foodie_screen/shared/widgets/foodie_button.dart';
 
@@ -149,8 +150,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),                
               ),
               trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
-              onTap: () {
-                // Hier kommt die Einstellung der essgewohnheit hin
+              onTap: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const FoodChoices()),
+                );
               },
             ),
             const Divider(color: Color.fromARGB(255, 255, 255, 255),
