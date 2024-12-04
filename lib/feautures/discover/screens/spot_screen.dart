@@ -98,10 +98,12 @@ final DatabaseRepository repository;
             future: repository.getPopularRecipes(), // Beliebte Rezepte laden
             builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) { // Ladeanzeige 
-            return const Center(
-            child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-           ),
+            return  const Center(
+            child: 
+            //Platform.isAndroid // damit es sich dem Handy anpasst
+             CircularProgressIndicator()
+           // : const CupertinoActivityIndicator(
+          // ),
           );
          } else { // rezepte gefunden
       final popularRecipes = snapshot.data as List<SpotWidget>; // Beliebte Rezepte
