@@ -24,25 +24,29 @@ class MailButton extends StatelessWidget {
             ),
           ],
         ),
-        child: TextField(
-          obscureText: false, 
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontFamily: "SFProDisplay", 
-            fontSize: 16, 
-          ),
-          decoration: InputDecoration(
-            hintText: text,
-            hintStyle: const TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 14,
-            fontStyle: FontStyle.italic,
-             fontFamily: "SFProDisplay",
+        child: Stack(
+          children: [TextField(
+            obscureText: false, 
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontFamily: "SFProDisplay", 
+              fontSize: 16, 
+              color: Color.fromARGB(255, 45, 39, 39),
             ),
-            filled: true,
-            fillColor: Colors.transparent, 
-            border: InputBorder.none, 
+            decoration: InputDecoration(
+              hintText: text,
+              hintStyle: const TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 14,
+              fontStyle: FontStyle.italic,
+               fontFamily: "SFProDisplay",
+              ),
+              filled: true,
+              fillColor: Colors.transparent, 
+              border: InputBorder.none, 
+            ),
           ),
+          ]
         ),
       ),
     );

@@ -11,7 +11,7 @@ import "package:foodie_screen/shared/widgets/foodie_button.dart";
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key,required this.repository}); 
   final DatabaseRepository repository;  
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
