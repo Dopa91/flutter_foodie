@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
 import 'package:foodie_screen/feautures/favorite/models/new_collection_dialog.dart';
 import 'package:foodie_screen/feautures/favorite/widgets/fav_container_widget.dart';
-import 'package:foodie_screen/feautures/favorite/widgets/fav_containers.dart';
+import 'package:foodie_screen/feautures/favorite/widgets/fav_containers_list.dart';
 import 'package:foodie_screen/shared/widgets/fav_button.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
 
@@ -65,16 +65,16 @@ class FavoritScreen extends StatelessWidget {
                                 8.0, // Abstand zwischen den Spalten
                             mainAxisSpacing: 8.0, // Abstand zwischen den Reihen
                           ),
-                          itemCount: favContainers.length,
+                          itemCount: favCollectionsList.length,
                           itemBuilder: (context, index) {
-                            final favContainer = favContainers[index];
-                            return FavContainer(
-                              onTap: favContainer.onTap,
-                              picture1: favContainer.picture1,
-                              picture2: favContainer.picture2,
-                              picture3: favContainer.picture3,
-                              picture4: favContainer.picture4,
-                              text: favContainer.text,
+                            final favContainer = favCollectionsList[index];
+                            return DisplayFavContainer(
+                              onTap:() {},
+                              picture1: favContainer.image1,
+                              picture2: favContainer.image2,
+                              picture3: favContainer.image3,
+                              picture4: favContainer.image4,
+                              text: favContainer.collectionName,
                             );
                           },
                         ),

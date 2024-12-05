@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-class FavContainer extends StatelessWidget {
+class DisplayFavContainer extends StatelessWidget {
   final Function()? onTap;
   final String text;
   final String picture1;
   final String picture2;
   final String picture3;
   final String picture4;
-  const FavContainer({
+  const DisplayFavContainer({
     super.key,
     required this.onTap,
     required this.text,
