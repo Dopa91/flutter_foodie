@@ -18,7 +18,18 @@ class MockDatabase implements DatabaseRepository {
 
    List<String> users = ["beyz", "6161"];
 
-
+// @override
+//   Future<void> addFavCollection(String collectionName, List<String> recipes) async {
+//   await Future.delayed(const Duration(milliseconds: 1)); 
+//   favCollectionsList.add(FavCollection(
+//     collectionName: collectionName,
+//     recipes: [],,
+//     image1: " ",
+//     image2: " ",
+//     image3: " ",
+//     image4: " ",
+//   ));
+// }
 
 
 
