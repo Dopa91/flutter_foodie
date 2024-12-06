@@ -16,9 +16,6 @@ class SharedPreferencesDatabase implements DatabaseRepository {
    List<String> users = ["beyz", "6161"];
 
 
-
-
-
   @override
   Future<void> addUser(String user) async {
     await Future.delayed(const Duration(milliseconds: 1));

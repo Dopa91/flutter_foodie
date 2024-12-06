@@ -52,15 +52,15 @@ class _PasswordButtonState extends State<PasswordButton> {
               ),
               filled: true,
               fillColor: Colors.transparent, 
-              border: InputBorder.none, // Rand entfernen
+              border: InputBorder.none, 
             ),
           ),
            Positioned( right: 10,
              child: IconButton( alignment: Alignment.center,
                   icon: Icon(
                     _isCurrentPasswordVisible
-                        ? Icons.visibility
-                        : Icons.visibility_off,
+                        ? Icons.visibility_off // das muss off  damit es in der richtigen reihenfolge ist 
+                        : Icons.visibility,
                     color: const Color.fromARGB(255, 45, 39, 39), size: 18,
                   ),
                   onPressed: () {
