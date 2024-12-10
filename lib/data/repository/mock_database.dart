@@ -1,5 +1,4 @@
 
-// import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/feautures/feed/models/food_data.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
@@ -23,7 +22,7 @@ class MockDatabase implements DatabaseRepository {
 //   await Future.delayed(const Duration(milliseconds: 1)); 
 //   favCollectionsList.add(FavCollection(
 //     collectionName: collectionName,
-//     recipes: [],,
+//     recipes: [],
 //     image1: " ",
 //     image2: " ",
 //     image3: " ",

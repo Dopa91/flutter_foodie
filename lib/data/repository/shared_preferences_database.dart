@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
+import 'package:foodie_screen/feautures/favorite/models/fav_collection_item.dart';
 import 'package:foodie_screen/feautures/feed/models/food_data.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 
@@ -12,6 +15,32 @@ class SharedPreferencesDatabase implements DatabaseRepository {
   SpotWidget(text: "Baklava", picture: "assets/images/baklava.png"),
   SpotWidget(text: "Pizza Caprese", picture: "assets/images/pizza.png"),
   SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),];
+
+  
+List<String> getStringList(String key) {
+  return [];
+}
+
+Future<void> setStringList(String key, List<String> value) async {
+}
+Future<void> saveCollection(FavCollection collection) async {
+  List<String> collections = getStringList("favCollections");
+  collections.add(jsonEncode({
+    "collectionName": collection.collectionName,
+    "recipes": collection.recipes,
+    "image1": collection.image1,
+    "image2": collection.image2,
+    "image3": collection.image3,
+    "image4": collection.image4,
+    }));
+
+  @override
+  Future<List<SpotWidget>> getPopularRecipes() async {
+     await Future.delayed(const Duration(seconds: 1));
+     return popularRecipes;
+  }
+
+}
 
    List<String> users = ["beyz", "6161"];
 
@@ -59,7 +88,6 @@ class SharedPreferencesDatabase implements DatabaseRepository {
   @override
   Future<void> addFavCollection(String collectionName, List<String> recipes) async {
     await Future.delayed(const Duration(seconds: 2));
-    favoriteCollections.add({collectionName: recipes});
 
   }
 
@@ -73,8 +101,8 @@ class SharedPreferencesDatabase implements DatabaseRepository {
   // Beliebte Rezepte abrufen
   @override
   Future<List<SpotWidget>> getPopularRecipes() async {
-     await Future.delayed(const Duration(seconds: 1)); 
-    return popularRecipes;
+     await Future.delayed(const Duration(seconds: 1));
+     return popularRecipes;
   }
 
   // Kategorien abrufen und zurückgeben
@@ -113,5 +141,4 @@ class SharedPreferencesDatabase implements DatabaseRepository {
     // TODO: implement addToFavorites
     throw UnimplementedError();
   }
-  
 }
