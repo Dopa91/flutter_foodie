@@ -12,6 +12,7 @@ dependencies:
   simple_search_dropdown: ^5.2.0
   flutter_lints: ^4.0.0
   social_login_buttons: ^1.0.7
+  firebase_core: ^3.8.1
 
 dev_dependencies:
   flutter_test:
