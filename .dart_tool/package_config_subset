@@ -98,6 +98,10 @@ meta
 2.12
 file:///Users/beyz/.pub-cache/hosted/pub.dev/meta-1.15.0/
 file:///Users/beyz/.pub-cache/hosted/pub.dev/meta-1.15.0/lib/
+nested
+2.12
+file:///Users/beyz/.pub-cache/hosted/pub.dev/nested-1.0.0/
+file:///Users/beyz/.pub-cache/hosted/pub.dev/nested-1.0.0/lib/
 path
 3.0
 file:///Users/beyz/.pub-cache/hosted/pub.dev/path-1.9.0/
@@ -110,6 +114,10 @@ plugin_platform_interface
 3.0
 file:///Users/beyz/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/
 file:///Users/beyz/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib/
+provider
+2.12
+file:///Users/beyz/.pub-cache/hosted/pub.dev/provider-6.1.2/
+file:///Users/beyz/.pub-cache/hosted/pub.dev/provider-6.1.2/lib/
 scrollable_positioned_list
 2.15
 file:///Users/beyz/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8/

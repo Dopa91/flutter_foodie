@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/screens/spot_screen.dart';
 import 'package:foodie_screen/feautures/favorite/screens/favorit_screen.dart';
 import 'package:foodie_screen/feautures/feed/screens/feed_screen.dart';
 import 'package:foodie_screen/feautures/profile/screens/settings_screen.dart'; 
 
 class ButtonNavigator extends StatefulWidget {
-const ButtonNavigator({super.key,required this.repository});
-final DatabaseRepository repository;
+const ButtonNavigator({super.key});
+//final DatabaseRepository repository;
 
   @override
   _ButtonNavigator createState() => _ButtonNavigator();
@@ -22,9 +21,9 @@ class _ButtonNavigator extends State<ButtonNavigator> {
   void initState() {
     super.initState();
     _screens = [
-      FeedScreen(repository: widget.repository),
+      const FeedScreen(),
        const FavoritScreen(),
-      SpotScreen(repository: widget.repository),
+      const SpotScreen(),
       const SettingsScreen(),
     ];
   }

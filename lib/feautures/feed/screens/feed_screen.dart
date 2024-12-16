@@ -6,10 +6,11 @@ import 'package:foodie_screen/feautures/feed/models/food_item.dart';
 import 'package:foodie_screen/feautures/feed/screens/recipe_screen.dart';
 import 'package:foodie_screen/feautures/profile/widgets/food_container_widget.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
+import 'package:provider/provider.dart';
 
 class FeedScreen extends StatefulWidget {
-  const FeedScreen({super.key, required this.repository});
-  final DatabaseRepository repository;
+  const FeedScreen({super.key});
+  //final DatabaseRepository repository;
 
   @override
   State<FeedScreen> createState() => _FeedScreenState();
@@ -38,7 +39,7 @@ class _FeedScreenState extends State<FeedScreen> {
               const SizedBox(height: 10),
               Expanded(
                 child: FutureBuilder(
-                  future: widget.repository.getAllRecipes(),
+                  future:context.read<DatabaseRepository>().getAllRecipes(),
                   builder: (context, snapshot) { // der wird aufgerufen, wenn die Daten fertig geladen sind
                     if (snapshot.connectionState == ConnectionState.waiting) { // wenn die Daten noch nicht fertig geladen sind dann wird ein Ladekreis angezeigt
                       return const Center(

@@ -4,11 +4,12 @@ import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/widgets/category_widget.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
+import 'package:provider/provider.dart';
 
 class SpotScreen extends StatelessWidget {
-  const SpotScreen({super.key,  required this.repository});
+  const SpotScreen({super.key, });
   
-final DatabaseRepository repository;  
+//final DatabaseRepository repository;  
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +96,7 @@ final DatabaseRepository repository;
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                    FutureBuilder(
-            future: repository.getPopularRecipes(), // Beliebte Rezepte laden
+            future: context.read<DatabaseRepository>().getPopularRecipes(), // Beliebte Rezepte laden
             builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) { // Ladeanzeige 
             return  const Center(

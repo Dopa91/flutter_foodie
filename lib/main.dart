@@ -2,9 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/themes.dart';
 import 'package:foodie_screen/data/repository/database_repository.dart';
-import 'package:foodie_screen/data/repository/mock_database.dart';
+import 'package:foodie_screen/data/repository/shared_preferences_database.dart';
 import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
 import 'package:foodie_screen/firebase_options.dart';
+import 'package:provider/provider.dart';
 
 
 void main() async {
@@ -13,8 +14,11 @@ await Firebase.initializeApp(
 options: DefaultFirebaseOptions.currentPlatform,
 
 );
-  final repository = MockDatabase();
-  runApp(MyApp( repository: repository));
+  runApp(MultiProvider(providers: [
+    Provider<DatabaseRepository>(create: (context)=> SharedPreferencesDatabase()
+    ),
+  ],
+    child: const MyApp()));
 }
 
 // void main() async {
@@ -24,9 +28,9 @@ options: DefaultFirebaseOptions.currentPlatform,
   
 // }
 class MyApp extends StatelessWidget {
- MyApp({super.key, required DatabaseRepository repository});
+ const MyApp({super.key});
 
-final DatabaseRepository repository= MockDatabase();
+//final DatabaseRepository repository= MockDatabase();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +38,7 @@ final DatabaseRepository repository= MockDatabase();
       debugShowCheckedModeBanner: false,
       title: "Foodie",
       theme: myTheme,
-      home:  MainScreen(repository: repository),
+      home:  const MainScreen(),
     );
   }
 }
