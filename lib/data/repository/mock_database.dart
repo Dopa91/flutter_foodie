@@ -126,7 +126,7 @@ class MockDatabase implements DatabaseRepository {
   
   @override
   Future<void> addToFavorites(String recipe) {
-    // TODO: implement addToFavorites
+ 
     throw UnimplementedError();
   }
   
