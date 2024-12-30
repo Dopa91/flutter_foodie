@@ -138,7 +138,7 @@ Future<void> saveCollection(FavCollection collection) async {
   
   @override
   Future<void> addToFavorites(String recipe) {
-    // TODO: implement addToFavorites
+ 
     throw UnimplementedError();
   }
 }
