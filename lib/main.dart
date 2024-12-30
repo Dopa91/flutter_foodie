@@ -8,8 +8,8 @@ import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/data/repository/firebase_auth_repository.dart';
 import 'package:foodie_screen/data/repository/shared_preferences_database.dart';
 import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
-import 'package:foodie_screen/feautures/feed/screens/feed_screen.dart';
 import 'package:foodie_screen/firebase_options.dart';
+import 'package:foodie_screen/shared/widgets/buttom_navigator.dart';
 import 'package:provider/provider.dart';
 
 
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                     if (user == null) {
                       return const MainScreen(); 
                     } else {
-                      return const FeedScreen(); // angemeldete seite 
+                      return const ButtonNavigator(); // angemeldete seite 
                     }
                   } else {
                     return const Center(child: CircularProgressIndicator());

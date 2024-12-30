@@ -1,10 +1,12 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
+import "package:foodie_screen/data/repository/auth_repository.dart";
 import "package:foodie_screen/feautures/authentification/screens/sign_up_screen.dart";
 import "package:foodie_screen/feautures/authentification/widgets/foodie_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/mail_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/password_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/richtlinien_widget.dart";
+import "package:provider/provider.dart";
 
 
 class MainScreen extends StatelessWidget {
@@ -112,7 +114,7 @@ class MainScreen extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: () {
-          print("Google");
+          context.read<AuthRepository>().signInWithGoogle();
         },
         child: Image.asset(
           "assets/icon/google.png",
