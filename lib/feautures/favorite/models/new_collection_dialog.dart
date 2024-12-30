@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:foodie_screen/data/repository/database_repository.dart';
-import 'package:foodie_screen/data/repository/shared_preferences_database.dart';
 import 'package:foodie_screen/feautures/favorite/models/fav_collection_item.dart';
 import 'package:foodie_screen/feautures/favorite/widgets/fav_containers_list.dart';
 
 void showNewCollection(BuildContext context) {
   
     final TextEditingController controller = TextEditingController();
-    final DatabaseRepository repository = SharedPreferencesDatabase();
+    // final DatabaseRepository repository = SharedPreferencesDatabase();
     
     showDialog(
       context: context,

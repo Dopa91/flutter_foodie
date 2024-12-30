@@ -14,6 +14,7 @@ class PasswordButton extends StatefulWidget {
 
 class _PasswordButtonState extends State<PasswordButton> {
    bool _isCurrentPasswordVisible = true;
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ class _PasswordButtonState extends State<PasswordButton> {
           children: [ 
            
              TextField(
+                controller: passwordController,
             obscureText: _isCurrentPasswordVisible, 
             textAlign: TextAlign.center,
             style: const TextStyle(

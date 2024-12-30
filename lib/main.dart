@@ -1,9 +1,14 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/themes.dart';
+import 'package:foodie_screen/data/repository/auth_repository.dart';
 import 'package:foodie_screen/data/repository/database_repository.dart';
+import 'package:foodie_screen/data/repository/firebase_auth_repository.dart';
 import 'package:foodie_screen/data/repository/shared_preferences_database.dart';
 import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
+import 'package:foodie_screen/feautures/feed/screens/feed_screen.dart';
 import 'package:foodie_screen/firebase_options.dart';
 import 'package:provider/provider.dart';
 
@@ -15,10 +20,12 @@ options: DefaultFirebaseOptions.currentPlatform,
 
 );
   runApp(MultiProvider(providers: [
-    Provider<DatabaseRepository>(create: (context)=> SharedPreferencesDatabase()
+    Provider<DatabaseRepository>(create: (_)=> SharedPreferencesDatabase()
+    ),
+    Provider<AuthRepository>(create: (_)=> FirebaseAuthRepository()
     ),
   ],
-    child: const MyApp()));
+    child: MyApp()));
 }
 
 // void main() async {
@@ -28,7 +35,10 @@ options: DefaultFirebaseOptions.currentPlatform,
   
 // }
 class MyApp extends StatelessWidget {
- const MyApp({super.key});
+  MyApp({super.key});
+ 
+ final authInstance = FirebaseAuth.instance;
+ final firestoreInstance = FirebaseFirestore.instance;
 
 //final DatabaseRepository repository= MockDatabase();
 
@@ -38,7 +48,25 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Foodie",
       theme: myTheme,
-      home:  const MainScreen(),
+      home: Scaffold(
+        body: StreamBuilder(
+          stream: authInstance.authStateChanges(),
+          builder: (context, snapshot) {if (snapshot.connectionState == ConnectionState.active) {
+                    User? user = snapshot.data;
+                    print("User Logged In: ${user != null}");
+                    if (user == null) {
+                      return const MainScreen(); 
+                    } else {
+                      return const FeedScreen(); // angemeldete seite 
+                    }
+                  } else {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+
+            
+          },
+        ),
+      )
     );
   }
 }

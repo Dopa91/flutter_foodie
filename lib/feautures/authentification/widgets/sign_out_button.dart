@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/data/repository/auth_repository.dart';
+import 'package:provider/provider.dart';
 
-class FoodieButton extends StatelessWidget {
-  const FoodieButton({
-    super.key,
-    required this.text,
-    required this.onPressed,
+
+//! Abmelde Button
+class SignOutButton extends StatefulWidget {
+  const SignOutButton({
+    super.key, required this.text, 
   });
 
   final String text;
-  final VoidCallback onPressed;
+
 
   @override
+  State<SignOutButton> createState() => _SignOutButtonState();
+}
+
+class _SignOutButtonState extends State<SignOutButton> {
+
+    
+  @override
   Widget build(BuildContext context) {
+    final authRepository=context.read<AuthRepository>();
     return Container(
       decoration: BoxDecoration(
         boxShadow: [
@@ -24,7 +34,7 @@ class FoodieButton extends StatelessWidget {
         ],
       ),
       child: ElevatedButton(
-        onPressed: onPressed,
+        onPressed: () => authRepository.signOut(),
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 15),
           backgroundColor: signInBtnColor,
@@ -33,14 +43,14 @@ class FoodieButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          text,style: const TextStyle(
-                                color: Color.fromARGB(255, 45, 25, 7),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                fontStyle: FontStyle.italic,
-                                fontFamily: "SFProDisplay",
-                              ),
-                            ),
+          widget.text,style: const TextStyle(
+            color: Color.fromARGB(255, 45, 25, 7),
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            fontStyle: FontStyle.italic,
+            fontFamily: "SFProDisplay",
+            ),
+          ),
       ),
     );
   }

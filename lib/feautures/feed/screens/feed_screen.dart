@@ -10,7 +10,6 @@ import 'package:provider/provider.dart';
 
 class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
-  //final DatabaseRepository repository;
 
   @override
   State<FeedScreen> createState() => _FeedScreenState();

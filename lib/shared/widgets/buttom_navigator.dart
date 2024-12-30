@@ -7,13 +7,13 @@ import 'package:foodie_screen/feautures/profile/screens/settings_screen.dart';
 
 class ButtonNavigator extends StatefulWidget {
 const ButtonNavigator({super.key});
-//final DatabaseRepository repository;
+
 
   @override
   _ButtonNavigator createState() => _ButtonNavigator();
 }
 class _ButtonNavigator extends State<ButtonNavigator> {
-  int _selectedIndex = 0;
+  int _selectedPage = 0;
 
   late final List<Widget> _screens;
 
@@ -30,19 +30,25 @@ class _ButtonNavigator extends State<ButtonNavigator> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      _selectedPage = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_selectedIndex],
+      body: _screens[_selectedPage],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: searchButtonColor1, 
         fixedColor: const Color.fromARGB(255, 174, 90, 11), 
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+       // currentIndex: _selectedIndex,
+       currentIndex: _selectedPage,
+     //   onTap: _onItemTapped,
+          onTap: (int index) {
+            setState(() {
+              _selectedPage = index;
+            });
+          },
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.restaurant), label: "Heute"),

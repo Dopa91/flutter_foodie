@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/feautures/authentification/widgets/sign_out_button.dart';
 import 'package:foodie_screen/feautures/profile/screens/change_email_screen.dart';
 import 'package:foodie_screen/feautures/profile/screens/change_password.dart';
 import 'package:foodie_screen/feautures/profile/screens/food_choices.dart';
 import 'package:foodie_screen/feautures/profile/screens/user_screen.dart';
-import 'package:foodie_screen/shared/widgets/foodie_button.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -185,11 +185,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             endIndent: 30,
             ),
              const SizedBox(height: 10,),
-              FoodieButton(
+              const SignOutButton(
               text: "Abmelden",
-              onPressed: () {
-              Navigator.pop(context); // geht zurück zur registrierung 
-              },
+              
             ),
           ],
         ),

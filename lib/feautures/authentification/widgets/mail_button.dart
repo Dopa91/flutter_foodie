@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
-class MailButton extends StatelessWidget {
+class MailButton extends StatefulWidget {
   const MailButton({
     super.key,
     required this.text,
   });
 
   final String text;
+
+  @override
+  State<MailButton> createState() => _MailButtonState();
+}
+
+class _MailButtonState extends State<MailButton> {
+   final mailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +32,9 @@ class MailButton extends StatelessWidget {
           ],
         ),
         child: Stack(
-          children: [TextField(
+          children: [
+            TextField(
+              
             obscureText: false, 
             textAlign: TextAlign.center,
             style: const TextStyle(
@@ -34,7 +43,7 @@ class MailButton extends StatelessWidget {
               color: Color.fromARGB(255, 45, 39, 39),
             ),
             decoration: InputDecoration(
-              hintText: text,
+              hintText: widget.text,
               hintStyle: const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 14,

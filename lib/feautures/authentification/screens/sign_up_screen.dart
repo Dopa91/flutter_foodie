@@ -1,16 +1,24 @@
 import "package:flutter/material.dart";
 import "package:foodie_screen/config/colors.dart";
+import "package:foodie_screen/data/repository/auth_repository.dart";
+import "package:foodie_screen/feautures/authentification/widgets/foodie_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/mail_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/password_button.dart";
 import "package:foodie_screen/feautures/authentification/widgets/richtlinien_widget.dart";
-import "package:foodie_screen/shared/widgets/buttom_navigator.dart";
-import "package:foodie_screen/shared/widgets/foodie_button.dart";
+import "package:foodie_screen/feautures/feed/screens/feed_screen.dart";
+import "package:provider/provider.dart";
 
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key}); 
- //final DatabaseRepository repository;  
- 
+
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
+  //final mailController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,17 +80,17 @@ class SignUpScreen extends StatelessWidget {
                 endIndent: 20, // abstand rechts
                 color: Color.fromARGB(255, 103, 71, 31),
                ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: FoodieButton(
                 text: "Sign Up!",
-                onPressed: () {Navigator.push(
-                      context, MaterialPageRoute(
-                        builder: (context) => const ButtonNavigator( 
-                      ),
-                      )
-                );
-                },
+                // onPressed: () {Navigator.push(
+                //       context, MaterialPageRoute(
+                //         builder: (context) => const ButtonNavigator( 
+                //       ),
+                //       )
+                // );
+                // },
                ),
               ),
                const SizedBox(height: 30),
@@ -105,8 +113,10 @@ class SignUpScreen extends StatelessWidget {
         ],
       ),
       child: TextButton(
-        onPressed: () {
-          print("Google");
+        onPressed: () {context.read<AuthRepository>().signInWithGoogle();
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const FeedScreen(),
+                ));
         },
         child: Image.asset(
           "assets/icon/google.png",

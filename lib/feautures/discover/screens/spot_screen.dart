@@ -9,7 +9,6 @@ import 'package:provider/provider.dart';
 class SpotScreen extends StatelessWidget {
   const SpotScreen({super.key, });
   
-//final DatabaseRepository repository;  
 
   @override
   Widget build(BuildContext context) {
