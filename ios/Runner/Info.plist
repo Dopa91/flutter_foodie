@@ -34,18 +34,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<!-- <key>GIDClientID</key> -->
-	<!-- <String>224300752700-7tjaralmm2ut0cg64j83jrvd3h0gq2mg.apps.googleusercontent.com</String> -->
-	<!-- <key>CFBundleURLTypes</key> -->
-	<!-- <array> -->
-		<!-- <dict> -->
-			<!-- <key>CFBundleTypeRole</key> -->
-			<!-- <string>Editor</string> -->
-			<!-- <key>CFBundleURLSchemes</key> -->
-			<!-- <array> -->
-				<!-- <string>com.googleusercontent.apps.224300752700-7tjaralmm2ut0cg64j83jrvd3h0gq2mg</string> -->
-			<!-- </array> -->
-		 <!-- </dict> -->
+	<key>GIDClientID</key>
+	<string>224300752700-7tjaralmm2ut0cg64j83jrvd3h0gq2mg.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.224300752700-7tjaralmm2ut0cg64j83jrvd3h0gq2mg</string>
+		    </array>
+		 </dict>
+    </array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
