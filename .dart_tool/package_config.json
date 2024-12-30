@@ -2,8 +2,14 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_flutterfire_internals",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.3.48",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "archive",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/archive-3.6.1",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/archive-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -39,15 +45,33 @@
     },
     {
       "name": "cli_util",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cli_util-0.4.1",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cli_util-0.4.2",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "clock",
       "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "cloud_firestore",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cloud_firestore-5.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "cloud_firestore_platform_interface",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cloud_firestore_platform_interface-6.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "cloud_firestore_web",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cloud_firestore_web-4.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "collection",
@@ -68,20 +92,50 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/ffi-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/file-7.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "firebase_auth",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_auth-5.3.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-7.4.10",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_auth_web-5.13.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "firebase_core",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core-3.8.1",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core-3.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "firebase_core_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-5.3.1",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-5.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "firebase_core_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core_web-2.18.2",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core_web-2.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -93,7 +147,7 @@
     },
     {
       "name": "flutter_launcher_icons",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.14.1",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.14.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -116,10 +170,64 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "image",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/image-4.3.0",
+      "name": "google_identity_services_web",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_identity_services_web-0.3.3",
       "packageUri": "lib/",
-      "languageVersion": "2.15"
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "google_sign_in",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in-6.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "google_sign_in_android",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.34",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "google_sign_in_ios",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_ios-5.7.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "google_sign_in_platform_interface",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_platform_interface-2.4.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "google_sign_in_web",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_web-0.12.4+3",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/http-1.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "image",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/image-4.5.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/intl-0.20.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "json_annotation",
@@ -182,14 +290,44 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
+      "name": "platform",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/platform-3.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "plugin_platform_interface",
       "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "posix",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/posix-6.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -206,10 +344,52 @@
       "languageVersion": "2.15"
     },
     {
-      "name": "simple_search_dropdown",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.2.0",
+      "name": "shared_preferences",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences-2.3.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "shared_preferences_android",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "simple_search_dropdown",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "sky_engine",
@@ -290,6 +470,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "xdg_directories",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/xml-6.5.0",
       "packageUri": "lib/",
@@ -297,9 +483,9 @@
     },
     {
       "name": "yaml",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/yaml-3.1.2",
+      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/yaml-3.1.3",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.4"
     },
     {
       "name": "foodie_screen",
@@ -308,7 +494,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-16T08:56:35.616466Z",
+  "generated": "2024-12-21T16:29:09.653088Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter",
