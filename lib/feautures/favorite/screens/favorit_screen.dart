@@ -6,8 +6,18 @@ import 'package:foodie_screen/feautures/favorite/widgets/fav_containers_list.dar
 import 'package:foodie_screen/shared/widgets/fav_button.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
 
-class FavoritScreen extends StatelessWidget {
+class FavoritScreen extends StatefulWidget {
   const FavoritScreen({super.key});
+
+  @override
+  _FavoritScreenState createState() => _FavoritScreenState();
+}
+
+class _FavoritScreenState extends State<FavoritScreen> {
+  void _addNewCollection() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +46,7 @@ class FavoritScreen extends StatelessWidget {
                     child: FavButton(
                       text: "Neue Kollektion",
                       onPressed: () {
-                        showNewCollection(context);
+                        showNewCollection(context, _addNewCollection); 
                       },
                     ),
                   ),
@@ -56,20 +66,17 @@ class FavoritScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: GridView.builder(
-                          padding:
-                              EdgeInsets.zero, // Entfernt jegliches Padding
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2, // Anzahl der Spalten
-                            crossAxisSpacing:
-                                8.0, // Abstand zwischen den Spalten
-                            mainAxisSpacing: 8.0, // Abstand zwischen den Reihen
+                          padding: EdgeInsets.zero, 
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2, 
+                            crossAxisSpacing: 8.0, 
+                            mainAxisSpacing: 8.0, 
                           ),
                           itemCount: favCollectionsList.length,
                           itemBuilder: (context, index) {
                             final favContainer = favCollectionsList[index];
                             return DisplayFavContainer(
-                              onTap:() {},
+                              onTap: () {},
                               picture1: favContainer.image1,
                               picture2: favContainer.image2,
                               picture3: favContainer.image3,
