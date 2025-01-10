@@ -1,8 +1,10 @@
-import 'package:foodie_screen/feautures/feed/models/food_item.dart';
+
+
+
 
 class FavCollection {
   String collectionName;
-  List<FoodItem> recipes;
+  List<String> recipes;
   final String image1;
   final String image2;
   final String image3;

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/data/repository/shared_preferences_database.dart';
+import 'package:foodie_screen/feautures/favorite/models/fav_collection_item.dart';
 import 'package:foodie_screen/feautures/favorite/models/new_collection_dialog.dart';
 import 'package:foodie_screen/feautures/favorite/widgets/fav_container_widget.dart';
 import 'package:foodie_screen/feautures/favorite/widgets/fav_containers_list.dart';
@@ -14,8 +16,22 @@ class FavoritScreen extends StatefulWidget {
 }
 
 class _FavoritScreenState extends State<FavoritScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _loadFavCollections();
+  }
+
+  Future<void> _loadFavCollections() async {
+    List<FavCollection> loadedCollections = await SharedPreferencesHelper.loadFavCollections();
+    setState(() {
+      favCollectionsList.addAll(loadedCollections);
+    });
+  }
+
   void _addNewCollection() {
     setState(() {});
+    SharedPreferencesHelper.saveFavCollections(favCollectionsList);
   }
 
   @override

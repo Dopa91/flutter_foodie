@@ -5,6 +5,45 @@ import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/feautures/favorite/models/fav_collection_item.dart';
 import 'package:foodie_screen/feautures/feed/models/food_data.dart';
 import 'package:foodie_screen/feautures/feed/models/food_item.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class SharedPreferencesHelper {
+  static const String _favCollectionsKey = 'favCollections';
+
+  static Future<void> saveFavCollections(List<FavCollection> collections) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> encodedCollections = collections.map((collection) {
+      return jsonEncode({
+        "collectionName": collection.collectionName,
+        "recipes": collection.recipes,
+        "image1": collection.image1,
+        "image2": collection.image2,
+        "image3": collection.image3,
+        "image4": collection.image4,
+      });
+    }).toList();
+    await prefs.setStringList(_favCollectionsKey, encodedCollections);
+  }
+
+  static Future<List<FavCollection>> loadFavCollections() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? encodedCollections = prefs.getStringList(_favCollectionsKey);
+    if (encodedCollections == null) {
+      return [];
+    }
+    return encodedCollections.map((encodedCollection) {
+      Map<String, dynamic> collectionMap = jsonDecode(encodedCollection);
+      return FavCollection(
+        collectionName: collectionMap["collectionName"],
+        recipes: List<String>.from(collectionMap["recipes"]),
+        image1: collectionMap["image1"],
+        image2: collectionMap["image2"],
+        image3: collectionMap["image3"],
+        image4: collectionMap["image4"],
+      );
+    }).toList();
+  }
+}
 
 class SharedPreferencesDatabase implements DatabaseRepository {
 
