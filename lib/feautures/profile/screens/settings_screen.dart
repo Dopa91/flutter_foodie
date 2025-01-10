@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
+import 'package:foodie_screen/data/repository/auth_repository.dart';
+import 'package:foodie_screen/feautures/authentification/screens/main_screen.dart';
 import 'package:foodie_screen/feautures/authentification/widgets/sign_out_button.dart';
 import 'package:foodie_screen/feautures/profile/screens/change_email_screen.dart';
 import 'package:foodie_screen/feautures/profile/screens/change_password.dart';
 import 'package:foodie_screen/feautures/profile/screens/food_choices.dart';
 import 'package:foodie_screen/feautures/profile/screens/user_screen.dart';
+import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -185,9 +188,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
             endIndent: 30,
             ),
              const SizedBox(height: 10,),
-              const SignOutButton(
+              SignOutButton(
               text: "Abmelden",
-              
+              onPressed: () async {
+                final authRepository = context.read<AuthRepository>();
+                await authRepository.signOut();
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const MainScreen()),
+                );
+              },
             ),
           ],
         ),

@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
-import 'package:foodie_screen/data/repository/auth_repository.dart';
-import 'package:provider/provider.dart';
 
-
-//! Abmelde Button
 class SignOutButton extends StatefulWidget {
   const SignOutButton({
-    super.key, required this.text, 
+    super.key, required this.text, required this.onPressed,
   });
 
   final String text;
-
+  final VoidCallback onPressed;
 
   @override
   State<SignOutButton> createState() => _SignOutButtonState();
 }
 
 class _SignOutButtonState extends State<SignOutButton> {
-
-    
   @override
   Widget build(BuildContext context) {
-    final authRepository=context.read<AuthRepository>();
     return Container(
       decoration: BoxDecoration(
         boxShadow: [
@@ -34,7 +27,7 @@ class _SignOutButtonState extends State<SignOutButton> {
         ],
       ),
       child: ElevatedButton(
-        onPressed: () => authRepository.signOut(),
+        onPressed: widget.onPressed,
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 15),
           backgroundColor: signInBtnColor,
@@ -55,13 +48,3 @@ class _SignOutButtonState extends State<SignOutButton> {
     );
   }
 }
-  
-
-                //          TextStyle(
-                //                 color: Color.fromARGB(255, 234, 220, 208),
-                //  fontWeight: FontWeight.w600,
-                //                 fontSize: 18,
-                //                 fontStyle: FontStyle.italic,
-                //                 fontFamily: "SFProDisplay",
-                //               ),
-                //             ),
