@@ -4,17 +4,17 @@ class MailButton extends StatefulWidget {
   const MailButton({
     super.key,
     required this.text,
+    required this.controller,
   });
 
   final String text;
+  final TextEditingController controller;
 
   @override
   State<MailButton> createState() => _MailButtonState();
 }
 
 class _MailButtonState extends State<MailButton> {
-   final mailController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,27 +34,27 @@ class _MailButtonState extends State<MailButton> {
         child: Stack(
           children: [
             TextField(
-              
-            obscureText: false, 
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontFamily: "SFProDisplay", 
-              fontSize: 16, 
-              color: Color.fromARGB(255, 45, 39, 39),
-            ),
-            decoration: InputDecoration(
-              hintText: widget.text,
-              hintStyle: const TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 14,
-              fontStyle: FontStyle.italic,
-               fontFamily: "SFProDisplay",
+              controller: widget.controller,
+              obscureText: false, 
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontFamily: "SFProDisplay", 
+                fontSize: 16, 
+                color: Color.fromARGB(255, 45, 39, 39),
               ),
-              filled: true,
-              fillColor: Colors.transparent, 
-              border: InputBorder.none, 
+              decoration: InputDecoration(
+                hintText: widget.text,
+                hintStyle: const TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: "SFProDisplay",
+                ),
+                filled: true,
+                fillColor: Colors.transparent, 
+                border: InputBorder.none, 
+              ),
             ),
-          ),
           ]
         ),
       ),

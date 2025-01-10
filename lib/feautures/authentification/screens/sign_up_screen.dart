@@ -68,10 +68,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 endIndent: 20, // abstand rechts
                 color: Color.fromARGB(255, 103, 71, 31),
               ),
-              const MailButton(text:"E-Mail"),
-              const MailButton(text: "Username"),
-              const PasswordButton(text: "Password"),
-              const PasswordButton(text: "Repeat Password"),
+              MailButton(text: "E-Mail", controller: TextEditingController()),
+              MailButton(text: "Username", controller: TextEditingController()),
+              PasswordButton(text: "Password", controller: TextEditingController()),
+              PasswordButton(text: "Repeat Password", controller: TextEditingController()),
               const SizedBox(height: 20),
                const Divider(
                 thickness: 0.9,
