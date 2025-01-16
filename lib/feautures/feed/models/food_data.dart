@@ -90,7 +90,7 @@ List<FoodItem> foodRecipe = [
     // iconClock:" ",
   ),
   FoodItem(
-    imagePath: "assets/images/image copy.png",
+    imagePath: "assets/images/sufle.png",
     imageTitle: "Soufflé",
     imageSubTime: "30 Min",
     imagePrice: "2 Pers./ 12.00 €",
