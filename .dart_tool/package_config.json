@@ -3,487 +3,487 @@
   "packages": [
     {
       "name": "_flutterfire_internals",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.3.48",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.3.48",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "archive",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/archive-4.0.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/archive-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "args",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/args-2.6.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/args-2.6.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "async",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "boolean_selector",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "characters",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/characters-1.3.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "checked_yaml",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "cli_util",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cli_util-0.4.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/cli_util-0.4.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "clock",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/clock-1.1.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "cloud_firestore",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cloud_firestore-5.6.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/cloud_firestore-5.6.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "cloud_firestore_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cloud_firestore_platform_interface-6.6.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/cloud_firestore_platform_interface-6.6.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "cloud_firestore_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/cloud_firestore_web-4.4.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/cloud_firestore_web-4.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/collection-1.18.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/collection-1.19.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.4"
     },
     {
       "name": "crypto",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/crypto-3.0.6",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/crypto-3.0.6",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "fake_async",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/ffi-2.1.3",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/ffi-2.1.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "file",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/file-7.0.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/file-7.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "firebase_auth",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_auth-5.3.4",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/firebase_auth-5.3.4",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "firebase_auth_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-7.4.10",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/firebase_auth_platform_interface-7.4.10",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "firebase_auth_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_auth_web-5.13.5",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/firebase_auth_web-5.13.5",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "firebase_core",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core-3.9.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/firebase_core-3.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "firebase_core_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-5.4.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/firebase_core_platform_interface-5.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "firebase_core_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/firebase_core_web-2.19.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/firebase_core_web-2.19.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter/packages/flutter",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.2/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "flutter_launcher_icons",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.14.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.14.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter/packages/flutter_test",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.2/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.2/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "google_identity_services_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_identity_services_web-0.3.3",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/google_identity_services_web-0.3.3",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "google_sign_in",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in-6.2.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/google_sign_in-6.2.2",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "google_sign_in_android",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.34",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/google_sign_in_android-6.1.34",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "google_sign_in_ios",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_ios-5.7.8",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/google_sign_in_ios-5.7.8",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "google_sign_in_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_platform_interface-2.4.5",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/google_sign_in_platform_interface-2.4.5",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "google_sign_in_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/google_sign_in_web-0.12.4+3",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/google_sign_in_web-0.12.4+3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/http-1.2.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/http-1.2.2",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "image",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/image-4.5.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/image-4.5.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/intl-0.20.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/intl-0.20.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "json_annotation",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/json_annotation-4.9.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/json_annotation-4.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "leak_tracker",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/leak_tracker-10.0.5",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/leak_tracker-10.0.7",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_flutter_testing",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.5",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.8",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_testing",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/lints-4.0.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/lints-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/meta-1.15.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/meta-1.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "nested",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/nested-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path-1.9.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "petitparser",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "platform",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/platform-3.1.6",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/platform-3.1.6",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "posix",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/posix-6.0.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/posix-6.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "provider",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/provider-6.1.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/provider-6.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "scrollable_positioned_list",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/scrollable_positioned_list-0.3.8",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "shared_preferences",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences-2.3.4",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences-2.3.4",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "shared_preferences_android",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "shared_preferences_linux",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "shared_preferences_platform_interface",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "shared_preferences_web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "shared_preferences_windows",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "simple_search_dropdown",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.3.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/simple_search_dropdown-5.3.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///opt/homebrew/Caskroom/flutter/3.24.2/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "social_login_buttons",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/social_login_buttons-1.0.7",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/social_login_buttons-1.0.7",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/source_span-1.10.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/stack_trace-1.11.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/stack_trace-1.12.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.4"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/stream_channel-2.1.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/stream_channel-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "string_scanner",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/string_scanner-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.1"
     },
     {
       "name": "stringr",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/stringr-1.0.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/stringr-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/test_api-0.7.2",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/test_api-0.7.3",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.4"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/typed_data-1.4.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/typed_data-1.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/vm_service-14.2.5",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/vm_service-14.3.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "web",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/web-1.1.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/web-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "xml",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/xml-6.5.0",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/xml-6.5.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "yaml",
-      "rootUri": "file:///Users/beyz/.pub-cache/hosted/pub.dev/yaml-3.1.3",
+      "rootUri": "file:///Users/andreasdopatka/.pub-cache/hosted/pub.dev/yaml-3.1.3",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -494,10 +494,10 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-12-21T16:29:09.653088Z",
+  "generated": "2025-01-16T12:06:34.660041Z",
   "generator": "pub",
-  "generatorVersion": "3.5.3",
-  "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.24.3/flutter",
-  "flutterVersion": "3.24.3",
-  "pubCache": "file:///Users/beyz/.pub-cache"
+  "generatorVersion": "3.6.0",
+  "flutterRoot": "file:///opt/homebrew/Caskroom/flutter/3.24.2/flutter",
+  "flutterVersion": "3.27.0",
+  "pubCache": "file:///Users/andreasdopatka/.pub-cache"
 }
