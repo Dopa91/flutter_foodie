@@ -89,6 +89,8 @@ class DisplayFavContainer extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Expanded(flex:5, 
+                  child: SizedBox()),
                   Text(
                     text,
                     style: const TextStyle(
@@ -99,6 +101,8 @@ class DisplayFavContainer extends StatelessWidget {
                       color: Color.fromARGB(255, 255, 249, 249),
                     ),
                   ),
+                  const Expanded(
+                    child: SizedBox()),
                   IconButton(
                   icon: const Icon(
                     Icons.delete,
