@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
@@ -23,6 +24,10 @@ class SharedPreferencesHelper {
       });
     }).toList();
     await prefs.setStringList(_favCollectionsKey, encodedCollections);
+  }
+  static Future<void> removeFavCollection() async {
+    await Future.delayed(const Duration(seconds: 3)); 
+    log("das ist ein test");
   }
 
   static Future<List<FavCollection>> loadFavCollections() async {

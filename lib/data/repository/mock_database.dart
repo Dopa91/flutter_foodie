@@ -29,6 +29,10 @@ class MockDatabase implements DatabaseRepository {
 //     image4: " ",
 //   ));
 // }
+ @override
+  Future<void> removeFavCollection(String recipe) async {
+    await Future.delayed(const Duration(seconds: 3)); 
+  }
 
 
 
