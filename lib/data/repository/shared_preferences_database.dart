@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
-
 import 'package:foodie_screen/data/repository/database_repository.dart';
 import 'package:foodie_screen/feautures/discover/widgets/spot_widget.dart';
 import 'package:foodie_screen/feautures/favorite/models/fav_collection_item.dart';
@@ -11,7 +9,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SharedPreferencesHelper {
   static const String _favCollectionsKey = 'favCollections';
 
-  static Future<void> saveFavCollections(List<FavCollection> collections) async {
+  static Future<void> saveFavCollections(
+      List<FavCollection> collections) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> encodedCollections = collections.map((collection) {
       return jsonEncode({
@@ -25,9 +24,19 @@ class SharedPreferencesHelper {
     }).toList();
     await prefs.setStringList(_favCollectionsKey, encodedCollections);
   }
-  static Future<void> removeFavCollection() async {
-    await Future.delayed(const Duration(seconds: 3)); 
-    log("das ist ein test");
+
+  static Future<void> removeFavCollection(String collectionName) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? encodedCollections = prefs.getStringList(_favCollectionsKey);
+
+    if (encodedCollections != null) {
+      encodedCollections.removeWhere((encodedCollection) {
+        Map<String, dynamic> collectionMap = jsonDecode(encodedCollection);
+        return collectionMap["collectionName"] == collectionName;
+      });
+
+      await prefs.setStringList(_favCollectionsKey, encodedCollections);
+    }
   }
 
   static Future<List<FavCollection>> loadFavCollections() async {
@@ -51,43 +60,39 @@ class SharedPreferencesHelper {
 }
 
 class SharedPreferencesDatabase implements DatabaseRepository {
-
- final List<String> categories = ["Low Carb", "Veggie", "schnell", "Season"];
+  final List<String> categories = ["Low Carb", "Veggie", "schnell", "Season"];
   final List<Map<String, List<String>>> favoriteCollections = [];
   final List<SpotWidget> popularRecipes = [
-  SpotWidget(text: "Dumplings",picture: "assets/images/dumplings.png"),
-  SpotWidget(text: "Baklava", picture: "assets/images/baklava.png"),
-  SpotWidget(text: "Pizza Caprese", picture: "assets/images/pizza.png"),
-  SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),];
+    SpotWidget(text: "Dumplings", picture: "assets/images/dumplings.png"),
+    SpotWidget(text: "Baklava", picture: "assets/images/baklava.png"),
+    SpotWidget(text: "Pizza Caprese", picture: "assets/images/pizza.png"),
+    SpotWidget(text: "Sushi", picture: "assets/images/sushi.png"),
+  ];
 
-  
-List<String> getStringList(String key) {
-  return [];
-}
-
-Future<void> setStringList(String key, List<String> value) async {
-}
-Future<void> saveCollection(FavCollection collection) async {
-  List<String> collections = getStringList("favCollections");
-  collections.add(jsonEncode({
-    "collectionName": collection.collectionName,
-    "recipes": collection.recipes,
-    "image1": collection.image1,
-    "image2": collection.image2,
-    "image3": collection.image3,
-    "image4": collection.image4,
-    }));
-
-  @override
-  Future<List<SpotWidget>> getPopularRecipes() async {
-     await Future.delayed(const Duration(seconds: 1));
-     return popularRecipes;
+  List<String> getStringList(String key) {
+    return [];
   }
 
-}
+  Future<void> setStringList(String key, List<String> value) async {}
+  Future<void> saveCollection(FavCollection collection) async {
+    List<String> collections = getStringList("favCollections");
+    collections.add(jsonEncode({
+      "collectionName": collection.collectionName,
+      "recipes": collection.recipes,
+      "image1": collection.image1,
+      "image2": collection.image2,
+      "image3": collection.image3,
+      "image4": collection.image4,
+    }));
 
-   List<String> users = ["beyz", "6161"];
+    @override
+    Future<List<SpotWidget>> getPopularRecipes() async {
+      await Future.delayed(const Duration(seconds: 1));
+      return popularRecipes;
+    }
+  }
 
+  List<String> users = ["beyz", "6161"];
 
   @override
   Future<void> addUser(String user) async {
@@ -103,13 +108,14 @@ Future<void> saveCollection(FavCollection collection) async {
     if (index == -1) {
       Exception("Benutzer nicht gefunden");
     }
-    users[index] = user; 
+    users[index] = user;
   }
 
   // Logindaten überprüfen
   @override
-  Future<bool> checkUserCredentials(String userName, String password, String email) async {
-    await Future.delayed(const Duration(seconds: 3)); 
+  Future<bool> checkUserCredentials(
+      String userName, String password, String email) async {
+    await Future.delayed(const Duration(seconds: 3));
     return users.contains(userName);
   }
 
@@ -119,70 +125,65 @@ Future<void> saveCollection(FavCollection collection) async {
     users.remove(user);
   }
 
-
-
   // Alle Rezepte abrufen
   @override
   Future<List<FoodItem>> getAllRecipes() async {
-    await Future.delayed(const Duration(seconds: 3)); 
+    await Future.delayed(const Duration(seconds: 3));
     return foodRecipe;
   }
 
-
   @override
-  Future<void> addFavCollection(String collectionName, List<String> recipes) async {
+  Future<void> addFavCollection(
+      String collectionName, List<String> recipes) async {
     await Future.delayed(const Duration(seconds: 2));
-
   }
 
   // Rezept löschen
-@override
+  @override
   Future<void> removeRecipe(String recipe) async {
-    await Future.delayed(const Duration(seconds: 3)); 
+    await Future.delayed(const Duration(seconds: 3));
     foodRecipe.remove(foodRecipe);
   }
 
   // Beliebte Rezepte abrufen
   @override
   Future<List<SpotWidget>> getPopularRecipes() async {
-     await Future.delayed(const Duration(seconds: 1));
-     return popularRecipes;
+    await Future.delayed(const Duration(seconds: 1));
+    return popularRecipes;
   }
 
   // Kategorien abrufen und zurückgeben
   @override
   Future<List<String>> getCategories() async {
-    await Future.delayed(const Duration(seconds: 3)); 
+    await Future.delayed(const Duration(seconds: 3));
     return categories;
   }
 
   // // Kategorie abrufen und zuruckgeben
   // @override
   // Future<List<String>> getCategory(String category) async {
-  //   await Future.delayed(const Duration(seconds: 3)); 
+  //   await Future.delayed(const Duration(seconds: 3));
   //  return [];
   // }
 
-  
-   @override
+  @override
   Future<String> PreparationContainer(String title, String description) async {
-    await Future.delayed(const Duration(seconds: 1)); 
+    await Future.delayed(const Duration(seconds: 1));
     return "Zubereitung";
   }
-  
+
   @override
-  Future<void> PortionCounter(String recipe, int newPortionSize) async{
-    await Future.delayed(const Duration(seconds: 1)); 
+  Future<void> PortionCounter(String recipe, int newPortionSize) async {
+    await Future.delayed(const Duration(seconds: 1));
   }
-  
+
   @override
   Future<void> FavoritScreen(getFavoriteRecipe) async {
-    await Future.delayed(const Duration(seconds: 1)); 
+    await Future.delayed(const Duration(seconds: 1));
   }
-  
+
   @override
   Future<void> addToFavorites(String recipe) {
- 
     throw UnimplementedError();
   }
 }

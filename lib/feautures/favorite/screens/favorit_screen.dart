@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodie_screen/config/colors.dart';
 import 'package:foodie_screen/data/repository/shared_preferences_database.dart';
 import 'package:foodie_screen/feautures/favorite/models/fav_collection_item.dart';
-import 'package:foodie_screen/feautures/favorite/models/new_collection_dialog.dart';
 import 'package:foodie_screen/feautures/favorite/widgets/fav_container_widget.dart';
-import 'package:foodie_screen/feautures/favorite/widgets/fav_containers_list.dart';
 import 'package:foodie_screen/shared/widgets/fav_button.dart';
 import 'package:foodie_screen/shared/widgets/search_button.dart';
 
@@ -16,6 +14,8 @@ class FavoritScreen extends StatefulWidget {
 }
 
 class _FavoritScreenState extends State<FavoritScreen> {
+  List<FavCollection> favCollectionsList = [];
+
   @override
   void initState() {
     super.initState();
@@ -23,15 +23,66 @@ class _FavoritScreenState extends State<FavoritScreen> {
   }
 
   Future<void> _loadFavCollections() async {
-    List<FavCollection> loadedCollections = await SharedPreferencesHelper.loadFavCollections();
+    List<FavCollection> loadedCollections =
+        await SharedPreferencesHelper.loadFavCollections();
     setState(() {
-      favCollectionsList.addAll(loadedCollections);
+      favCollectionsList = loadedCollections;
     });
   }
 
-  void _addNewCollection() {
-    setState(() {});
-    // SharedPreferencesHelper.saveFavCollections(favCollectionsList);
+  // Methode, um eine neue Kollektion hinzuzufügen
+  void _addNewCollection(String collectionName) {
+    setState(() {
+      var newCollection = FavCollection(
+        collectionName: collectionName,
+        recipes: [],
+        image1: '',
+        image2: '',
+        image3: '',
+        image4: '',
+      );
+
+      if (!favCollectionsList
+          .any((fav) => fav.collectionName == newCollection.collectionName)) {
+        favCollectionsList.add(newCollection);
+        SharedPreferencesHelper.saveFavCollections(favCollectionsList);
+      }
+    });
+  }
+
+  void showNewCollection(BuildContext context) {
+    TextEditingController collectionNameController = TextEditingController();
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Neue Kollektion erstellen"),
+          content: TextField(
+            controller: collectionNameController,
+            decoration: const InputDecoration(labelText: 'Kollektion Name'),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                String collectionName = collectionNameController.text.trim();
+                if (collectionName.isNotEmpty) {
+                  _addNewCollection(collectionName);
+                  Navigator.pop(context);
+                }
+              },
+              child: const Text('Speichern'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Abbrechen'),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -61,8 +112,10 @@ class _FavoritScreenState extends State<FavoritScreen> {
                     padding: const EdgeInsets.only(right: 0),
                     child: FavButton(
                       text: "Neue Kollektion",
-                      onPressed: () {
-                        showNewCollection(context, _addNewCollection); 
+                      onPressed: () async {
+                        setState(() {
+                          showNewCollection(context);
+                        });
                       },
                     ),
                   ),
@@ -82,16 +135,18 @@ class _FavoritScreenState extends State<FavoritScreen> {
                     children: [
                       Expanded(
                         child: GridView.builder(
-                          padding: EdgeInsets.zero, 
-                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2, 
-                            crossAxisSpacing: 8.0, 
-                            mainAxisSpacing: 8.0, 
+                          padding: EdgeInsets.zero,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 8.0,
+                            mainAxisSpacing: 8.0,
                           ),
                           itemCount: favCollectionsList.length,
                           itemBuilder: (context, index) {
                             final favContainer = favCollectionsList[index];
                             return DisplayFavContainer(
+                              collectionName: favContainer.collectionName,
                               onTap: () {},
                               picture1: favContainer.image1,
                               picture2: favContainer.image2,
@@ -106,7 +161,6 @@ class _FavoritScreenState extends State<FavoritScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
             ],
           ),
         ),

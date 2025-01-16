@@ -1,7 +1,3 @@
-
-
-
-
 class FavCollection {
   String collectionName;
   List<String> recipes;
@@ -13,9 +9,9 @@ class FavCollection {
   FavCollection({
     required this.collectionName,
     required this.recipes,
-    required this.image1, 
-    required this.image2, 
-    required this.image3, 
-    required this.image4, 
+    required this.image1,
+    required this.image2,
+    required this.image3,
+    required this.image4,
   });
 }
