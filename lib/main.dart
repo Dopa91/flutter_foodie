@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -53,7 +55,7 @@ class MyApp extends StatelessWidget {
           stream: authInstance.authStateChanges(),
           builder: (context, snapshot) {if (snapshot.connectionState == ConnectionState.active) {
                     User? user = snapshot.data;
-                    print("User Logged In: ${user != null}");
+                    log("User Logged In: ${user != null}");
                     if (user == null) {
                       return const MainScreen(); 
                     } else {
