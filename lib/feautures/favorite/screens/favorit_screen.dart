@@ -31,7 +31,7 @@ class _FavoritScreenState extends State<FavoritScreen> {
 
   void _addNewCollection() {
     setState(() {});
-    SharedPreferencesHelper.saveFavCollections(favCollectionsList);
+    // SharedPreferencesHelper.saveFavCollections(favCollectionsList);
   }
 
   @override
